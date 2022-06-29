@@ -1,0 +1,17 @@
+---
+title: "Mental Health Implementations"
+author: "Anne"
+date: '2022-06-29'
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Issues in the implementation of AI in mental healthcare
+
+
+## Issues in intervention studies
+
+- few studies test algorithms in independent samples [@aafjes-vandoorn_etal21]
