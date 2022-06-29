@@ -1,17 +1,119 @@
 ---
-title: "Mental Health Implementations"
-author: "Anne"
-date: '2022-06-29'
-output: word_document
+title             : "Implementation Issues AI - Mental Healthcare"
+shorttitle        : "AI Implementation in Mental Healthcare"
+
+author: 
+  - name          : "Anne-Kathrin Kleine"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : ""
+    email         : "Anne-Kathrin.Kleine@psy.lmu.de"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : ""
+    affiliation   : ""
+    role:
+      - ""
+      - ""
+
+affiliation:
+  - id            : "1"
+    institution   : "LMU"
+  - id            : ""
+    institution   : ""
+
+authornote: |
+  LMU
+
+abstract: |
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "AI, Mental Health"
+wordcount         : "X"
+
+bibliography      : "../config/LMU_AI_Team.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf
+header-includes:
+  - |
+    \makeatletter
+    \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-1em}%
+      {\normalfont\normalsize\bfseries\typesectitle}}
+    \renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-\z@\relax}%
+      {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+    \makeatother
+csl               : "../config/apa.csl" #< path to csl file
+documentclass     : "apa7"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs") })
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
 ```
 
-# Issues in the implementation of AI in mental healthcare
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
 
 
-## Issues in intervention studies
+## Issues in the implementation of AI in mental healthcare practice
 
-- few studies test algorithms in independent samples [@aafjes-vandoorn_etal21]
+- Big data confidentiality [@aafjes-vandoorn_etal21]
+- Black box problems [@aafjes-vandoorn_etal21, @chekroud_etal21]
+- In addition, black-box predictive models combined with (similarly complex) explanatory methods may yield complicated decision pathways that increase the likelihood of human error [@chekroud_etal21]
+- ethical challenges:
+    - responsibility [@chekroud_etal21]
+    - dehuminization [@chekroud_etal21]
+    - in clinical settings: transparency highly values - opposing black box problem [@chekroud_etal21]
+    - erronous outcomes for underrepresented groups [@chekroud_etal21]
+    - misuse of personal and sensitive data [@chekroud_etal21]
+
+## Issues in application research 
+
+- few studies test algorithms in independent samples [@aafjes-vandoorn_etal21, @chekroud_etal21]
+- when randomizing patients to algorithm-informed care or usual care, clinicians may override algorithm recommendations and choose alternative treatments [@chekroud_etal21]
+- Patients may refuse the algorithm-recommended treatment, or have restrictions to its use that were not contemplated by the decision support tool (e.g., prohibitive cost of therapy) [@chekroud_etal21]
+- In light of this, effect sizes for these interventions will often vary when applied in different settings [@chekroud_etal21]
+- the development of data-driven decision tools should be informed by extensive consultation and coproduction with the intended users, in order to implement models that maximize acceptability and compatibility with other clinical guidelines (i.e., risk management procedures, norms about safe dosage or titration of medications) [@chekroud_etal21]
+- fear of being substituted by AI systems? 
+- research environments must encourage large-scale, collaborative, interdisciplinary consortia [@browning_etal20]
+
+
+## Ways out and forward 
+
+- Thus, it will be important for psychotherapy researchers to become better-versed in the ML methods and how to interpret this research literature [@chekroud_etal21]
+- Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
+- When conducted with care for ethical considerations, ML research can become an essential complement to traditional psychotherapy research [@chekroud_etal21]
+- highlight AI as a chance and addition to commoon practice (supporting, not substituting):
+    - It is important to highlight that none of the identified ML applications were developed to replace the therapist, but instead were designed to advance the therapists’ skills and treatment outcome [@chekroud_etal21]
+    - ML methods provide an opportunity for multimodal analyses of patient and therapist moment-bymoment changes in word use, speech, body movements, and physiological states, that are not (yet) usually considered in clinical decision making [@chekroud_etal21]
+
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
