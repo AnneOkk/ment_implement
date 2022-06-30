@@ -80,7 +80,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ## Issues in the implementation of AI in mental healthcare practice
 
 - Big data confidentiality [@aafjes-vandoorn_etal21]
-- Black box problems [@aafjes-vandoorn_etal21, @chekroud_etal21]
+- Black box problems [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19]
 - In addition, black-box predictive models combined with (similarly complex) explanatory methods may yield complicated decision pathways that increase the likelihood of human error [@chekroud_etal21]
 - ethical challenges:
     - responsibility [@chekroud_etal21]
@@ -88,26 +88,85 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
     - in clinical settings: transparency highly values - opposing black box problem [@chekroud_etal21]
     - erronous outcomes for underrepresented groups [@chekroud_etal21]
     - misuse of personal and sensitive data [@chekroud_etal21]
+- diagnostic challenges [@lee_etal21]
+    - Performance of supervised algorithms depends on the quality of the diagnostic labels used to train a model; Given the heterogeneity characteristic of mental illnesses, labels of disease states may not be specific enough to yield AI algorithms with high sensitivity and specificity
+        - One possibility is to use ML algorithms to predict specific symptoms or functional consequences rather than diagnoses
+        - Another opportunity lies in leveraging the strength of deep neural networks that can operate without human oversight to identify novel biomarkers for detecting specific diseases (29)
+        - When the results of ML algorithms are published, they must include information regarding the quality of the data used to train the model as well as any potential biases in it, which is rarely done at present.
+
 
 ## Issues in application research 
 
-- few studies test algorithms in independent samples [@aafjes-vandoorn_etal21, @chekroud_etal21]
+- few studies test algorithms in independent samples [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19]
 - when randomizing patients to algorithm-informed care or usual care, clinicians may override algorithm recommendations and choose alternative treatments [@chekroud_etal21]
 - Patients may refuse the algorithm-recommended treatment, or have restrictions to its use that were not contemplated by the decision support tool (e.g., prohibitive cost of therapy) [@chekroud_etal21]
 - In light of this, effect sizes for these interventions will often vary when applied in different settings [@chekroud_etal21]
 - the development of data-driven decision tools should be informed by extensive consultation and coproduction with the intended users, in order to implement models that maximize acceptability and compatibility with other clinical guidelines (i.e., risk management procedures, norms about safe dosage or titration of medications) [@chekroud_etal21]
 - fear of being substituted by AI systems? 
 - research environments must encourage large-scale, collaborative, interdisciplinary consortia [@browning_etal20]
+- performance metrics: 
+    - The selected factors may include both specific computational properties such as parameter identifiability (see Table 1) as well as practical features of an assay (e.g. duration to complete, complexity) and clinical validity (e.g. correlation with symptoms or treatment response) [@browning_etal20]
+    - Longitudinal observational studies may be used to assess whether an assay covaries with mental state changes or traits of interest and whether it has predictive validity, for example by predicting response to treatment [@browning_etal20]
+    - Regardless of whether the goal of using a computational assay is to predict a clinical outcome or to guide the development of a novel treatment, the efficacy of computationally informed approaches must ultimately be assessed in clinical trials. Such trials may, for example, randomly assign patients to be treated according to a predictive algorithm or standard treatment, or to receive a computationally informed intervention vs. a control [@browning_etal20]
+    - difficulty of comparing different algorithms and AI systems [@kelly_etal19]
+    - metrics may not reflect climical applicability: e.g., AUC not the most useful metric and difficult to understand by clinicians [@kelly_etal19]
+    - However, none of these measures ultimately reflect what is most important to patients, namely whether the use of the model results in a beneficial change in patient care [@kelly_etal19, @shah_etal19]
+    - possible solution: decision curve analysis 
+    
 
 
 ## Ways out and forward 
 
-- Thus, it will be important for psychotherapy researchers to become better-versed in the ML methods and how to interpret this research literature [@chekroud_etal21]
-- Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
+
 - When conducted with care for ethical considerations, ML research can become an essential complement to traditional psychotherapy research [@chekroud_etal21]
-- highlight AI as a chance and addition to commoon practice (supporting, not substituting):
+- highlight AI as a chance and addition to common practice (supporting, not substituting):
     - It is important to highlight that none of the identified ML applications were developed to replace the therapist, but instead were designed to advance the therapists’ skills and treatment outcome [@chekroud_etal21]
-    - ML methods provide an opportunity for multimodal analyses of patient and therapist moment-bymoment changes in word use, speech, body movements, and physiological states, that are not (yet) usually considered in clinical decision making [@chekroud_etal21]
+    - ML methods provide an opportunity for multimodal analyses of patient and therapist moment-by-moment changes in word use, speech, body movements, and physiological states, that are not (yet) usually considered in clinical decision making [@chekroud_etal21]
+    - finer grained diagnoses possible: First, AI approaches can bolster the ability to differentiate between diagnoses with similar initial clinical presentations but divergent treatment approaches (43) – e.g., identifying bipolar versus unipolar depression based on brain imaging features (44), or differentiating between types of dementia using structural MRI scans (45) [@lee_etal21]
+    - Secondly, data-driven AI methods can help identify novel disease subtypes based on heterogeneity of presentations, demographic features, and environmental factors (43). Examples include neurocognitive profiles in bipolar disorder (46), genetic profiles in schizophrenia (47), biomarker profiles in psychoses (48), and neuroimaging subtypes in depression (49) [@lee_etal21]
+    - Thirdly, AI approaches can build models from unusual/novel data sources and reconcile data from multiple heterogeneous datastreams, e.g., EHR, behavioral data from digital phenotyping and wearable sensors, speech, social media feeds, neurophysiology, imaging, and genetics (50), to coalesce explanatory and mechanistic models of mental illness across self-report to molecular assessments [@lee_etal21]
+        - Illustrations include Instagram photographs to predict risk of developing depression (51), speech data to predict psychosis onset in high-risk youth (52), and identifying individuals with PTSD (53) [@lee_etal21]
+        - Mental illnesses may be observable in online contexts, and social media data have been leveraged to predict diagnoses and relapses (51,72,76,77), with accuracies comparable to clinician assessments and screening surveys (78) [@lee_etal21]
+        - AI methodology can also incorporate both genetic and environmental risks (54), accounting for complex environment-gene interactions and psych-bio-social factors, particularly relevant in PTSD (55) [@lee_etal21]
+        - Furthermore, AI methodologies are well-suited for deciphering patterns from longitudinal data (56), critical for honing the accuracy of diagnoses based on evolving psychiatric symptoms [@lee_etal21]
+        - Lastly, AI methods may have a growing role in gathering sensitive and accurate data from patients. One study found that individuals were more forthcoming disclosing sensitive information with a computer system than with a person (57) [@lee_etal21]
+- Importance of practitioner training: 
+    - To improve understanding, medical students and practising clinicians should be provided with an easily accessible AI curriculum to enable them to critically appraise, adopt and use AI tools safely in their practice [@kelly_etal19]
+    - Thus, it will be important for psychotherapy researchers to become better-versed in the ML methods and how to interpret this research literature [@chekroud_etal21]
+    - Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
+- Sendak et al. (105) have proposed four phases of translation necessary to bridge this gap: design and development of ML products that can support clinical decision-making and are actionable; evaluation and validation; diffusion and scaling across settings such that the tools are more widely applicable; and continued monitoring and maintenance to remain current with clinical practice needs [@lee_etal21]
+    
+## Relevant terms: 
+
+- The International Medical Device Regulators Forum (IMDRF) has defined *Software* as a Medical Device as “software intended to be used for medical purposes that performs its objectives without being part of a hardware medical device.”
+- *Automation vs. decision support tasks*: 
+    - Automation tasks are cases in which “a machine operates independently to complete a task,” whereas clinical decision support tasks are cases in which “a machine is concerned with providing information or assistance to the primary agent responsible for task completion.”
+
+##  Review @sendak_etal20
+
+- large amount of academic knowledge and developed algorithms not integrated into clinical care: 
+- the current review focusses on models that have been productised and integrated into clinical care rather than the large body of academic work of published models that are not integrated
+- This review focusses on machine learning models that input data from electronic health records (EHR) applied to clinical decision support tasks, rather than models applied to automation tasks
+- machine learning technologies are referred to as products rather than models, recognising the significant effort required to productise and operationalise models that are often built primarily for academic purposes
+- machine learning is initially expected to impact healthcare through augmenting rather than replacing clinical workflows
+- Machine learning technologies were included as case studies if they met two criteria: 1) they tackle a clinical problem using solely EHR data; and 2) they are evaluated and validated through direct integration with an EHR to demonstrate clinical, statistical, or economic utility
+- Case studies were selected amongst 1,672 presentations at 9 informatics and machine learning conferences between January 2018 and October 2019
+
+### The translation milestones:
+- To map between individual products and the translational path, milestones for each product are marked within four phases
+
+#### 1) design and develop
+- The setting and funding of the team shapes many aspects of how the machine learning product is designed and developed.
+- For example, in an academic setting it may be easier to cultivate collaborations across domains of expertise early on in the process. However, academic settings may have difficulty recruiting and retaining the technical talent required to productise complex technologies.
+
+#### 2) evaluate and validate
+- Clinical utility: can the product improve clinical care and patient outcomes?
+- Statistical validity: Can the machine learning product perform well on metrics of accuracy, reliability, and calibration?
+- Economic utility: Can there be a net benefit from the investment in the machine learning product?
+
+
+3) diffuse and scale; 4)continuing monitoring and maintenance
+
 
 
 
