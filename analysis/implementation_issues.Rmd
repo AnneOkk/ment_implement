@@ -82,8 +82,11 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - *Automation vs. decision support tasks*: 
     - Automation tasks are cases in which “a machine operates independently to complete a task,” whereas clinical decision support tasks are cases in which “a machine is concerned with providing information or assistance to the primary agent responsible for task completion.”
 
+
 ## Issues in the implementation of AI in mental healthcare practice
 
+- large amount of academic knowledge and developed algorithms not integrated into clinical care [@sendak_etal20]
+  - "This narrative review was unable to provide standard metrics of adoption, because many of the figures marketed by product developers have no peer-reviewed evidence" [@sendak_etal20]
 - Big data confidentiality [@aafjes-vandoorn_etal21]
 - Black box problems [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19]
 - In addition, black-box predictive models combined with (similarly complex) explanatory methods may yield complicated decision pathways that increase the likelihood of human error [@chekroud_etal21]
@@ -116,11 +119,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - fear of being substituted by AI systems? 
 - research environments must encourage large-scale, collaborative, interdisciplinary consortia [@browning_etal20]
 - performance metrics: 
-    - The selected factors may include both specific computational properties such as parameter identifiability (see Table 1) as well as practical features of an assay (e.g. duration to complete, complexity) and clinical validity (e.g. correlation with symptoms or treatment response) [@browning_etal20]
+    - The selected factors may include both specific computational properties such as parameter identifiability as well as practical features of an assay (e.g. duration to complete, complexity) and clinical validity (e.g. correlation with symptoms or treatment response) [@browning_etal20]
     - Longitudinal observational studies may be used to assess whether an assay covaries with mental state changes or traits of interest and whether it has predictive validity, for example by predicting response to treatment [@browning_etal20]
     - Regardless of whether the goal of using a computational assay is to predict a clinical outcome or to guide the development of a novel treatment, the efficacy of computationally informed approaches must ultimately be assessed in clinical trials. Such trials may, for example, randomly assign patients to be treated according to a predictive algorithm or standard treatment, or to receive a computationally informed intervention vs. a control [@browning_etal20]
     - difficulty of comparing different algorithms and AI systems [@kelly_etal19]
-    - metrics may not reflect climical applicability: e.g., AUC not the most useful metric and difficult to understand by clinicians [@kelly_etal19]
+    - "products listed in Table 2 that predict the same outcome cannot be easily compared. Reporting of machine learning models often fails to follow establish best practices and model performance measures are not standardised across publications" [@sendak_etal20]
+    - there is no current standard definition of accuracy and patient health outcomes against which to measure the products.
+    - metrics may not reflect clinical applicability: e.g., AUC not the most useful metric and difficult to understand by clinicians [@kelly_etal19]
     - However, none of these measures ultimately reflect what is most important to patients, namely whether the use of the model results in a beneficial change in patient care [@kelly_etal19, @shah_etal19]
     - possible solution: decision curve analysis 
     
@@ -152,7 +157,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - Thanks to the advancement in cuttingedge techniques in ML/AI, psychiatrists and investigators now have an unprecedented opportunity to benefit from complex patterns in brain, behavior, and genes using machine learning tools [@chen_etal22]
 - Increasing evidence suggests that datadriven subtyping could drive novel neurobiological phenotypes associated with distinctive behavior and cognitive functioning
 - Chances for *precision psychiatyry*: categorization of psychiatric patients into new data-driven subgroups [@roth_etal21]
-    - less stigamtization
+    - less stigmatization
     - homogenous disease classification, early diagnosis, prediction of disease trajectory, and tailored, more effective, safer, and predictable treatment, potentially at the individual level
 - Clinical decision support (CDS) provides clinicians with knowledge (e.g., treatment guidelines) and patient-specific information (e.g., clinical and laboratory data), specifically selected and presented in a timely fashion, to enhance the quality of medical care [@roth_etal21]
 
@@ -163,69 +168,54 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
 - Sendak et al. (105) have proposed four phases of translation necessary to bridge this gap: design and development of ML products that can support clinical decision-making and are actionable; evaluation and validation; diffusion and scaling across settings such that the tools are more widely applicable; and continued monitoring and maintenance to remain current with clinical practice needs [@lee_etal21]
 - For instance, a classification function learned by the machine to predict a disease outcome would not only need to report a probability outcome but also need to address additional questions for the end-user: why is this outcome instead of the alternative? How reliable is the outcome? When does it fail if something is missing or misrepresented? When and why the prediction is wrong? Accordingly, a model with improved interpretability comes with parameter/structure/connectivity constraints and some prior domain knowledge [@chen_etal22]
+- The translation milestones [@sendak_etal20]
+  - To map between individual products and the translational path, milestones for each product are marked within four phases:
+  - 1) design and develop
+    - The setting and funding of the team shapes many aspects of how the machine learning product is designed and developed.
+    - For example, in an academic setting it may be easier to cultivate collaborations across domains of expertise early on in the process. However, academic settings may have difficulty recruiting and retaining the technical talent required to productise complex technologies.
 
-##  Review @sendak_etal20
+  - 2) evaluate and validate
+    - Clinical utility: can the product improve clinical care and patient outcomes?
+    - Statistical validity: Can the machine learning product perform well on metrics of accuracy, reliability, and calibration?
+    - Economic utility: Can there be a net benefit from the investment in the machine learning product?
 
-- large amount of academic knowledge and developed algorithms not integrated into clinical care: 
-- the current review focusses on models that have been productised and integrated into clinical care rather than the large body of academic work of published models that are not integrated
-- This review focusses on machine learning models that input data from electronic health records (EHR) applied to clinical decision support tasks, rather than models applied to automation tasks
+  - 3) diffuse and scale
+    - diffuse and scale across settings, which requires special attention to deployment modalities, funding, and drivers of adoption.
+    - To scale, machine learning products must be able to ingest data from different EHR and must also support on-premise and cloud deployments. For this reason, many models are also distributed as stand-alone web applications that require manual entry to calculate risk.
+
+  - 4) continuing monitoring and maintenance
+    - Data quality, population characteristics, and clinical practice change over time and impact the validity and utility of models.
+    - Model reliability and model updating are active fields of research and will be integral to ensure the robustness of machine learning products in clinical care.
+
+
+
 - machine learning technologies are referred to as products rather than models, recognising the significant effort required to productise and operationalise models that are often built primarily for academic purposes
 - The ‘inconvenient truth’ of machine learning in healthcare was pointedly described as “at present the algorithms that feature prominently in research literature are in fact not, for the most part, executable at the front lines of clinical practice.”
 - machine learning is initially expected to impact healthcare through augmenting rather than replacing clinical workflows
 - Machine learning technologies were included as case studies if they met two criteria: 1) they tackle a clinical problem using solely EHR data; and 2) they are evaluated and validated through direct integration with an EHR to demonstrate clinical, statistical, or economic utility
 - Case studies were selected amongst 1,672 presentations at 9 informatics and machine learning conferences between January 2018 and October 2019
 
-### The translation milestones:
-- To map between individual products and the translational path, milestones for each product are marked within four phases
-
-#### 1) design and develop
-- The setting and funding of the team shapes many aspects of how the machine learning product is designed and developed.
-- For example, in an academic setting it may be easier to cultivate collaborations across domains of expertise early on in the process. However, academic settings may have difficulty recruiting and retaining the technical talent required to productise complex technologies.
-
-#### 2) evaluate and validate
-- Clinical utility: can the product improve clinical care and patient outcomes?
-- Statistical validity: Can the machine learning product perform well on metrics of accuracy, reliability, and calibration?
-- Economic utility: Can there be a net benefit from the investment in the machine learning product?
-
-#### 3) diffuse and scale
-- diffuse and scale across settings, which requires special attention to deployment modalities, funding, and drivers of adoption.
-- To scale, machine learning products must be able to ingest data from different EHR and must also support on-premise and cloud deployments. For this reason, many models are also distributed as stand-alone web applications that require manual entry to calculate risk.
-
-#### 4) continuing monitoring and maintenance
-- Data quality, population characteristics, and clinical practice change over time and impact the validity and utility of models.
-- Model reliability and model updating are active fields of research and will be integral to ensure the robustness of machine learning products in clinical care.
-
-### Challenges and limitations:
-- This narrative review was unable to provide standard metrics of adoption, because many of the figures marketed by product developers have no peer-reviewed evidence
-- While stealth science is not uncommon amongst biomedical innovations, lack of transparency is particularly concerning with machine learning
-- First, data quality systems and frameworks need to be adopted to ensure that machine learning models have face validity.
-- without interoperability across EHR systems, machine learning products will continue to face significant challenges scaling and diffusing across systems
-- products listed in Table 2 that predict the same outcome cannot be easily compared. Reporting of machine learning models often fails to follow establish best practices and model performance measures are not standardised across publications.
-- there is no current standard definition of accuracy and patient health outcomes against which to measure the products.
-
 
 ## Research Ideas
 
 ### Focus Group Psychiatrists 
 - Educate about chances and limitations 
-- Discuss implementation possibilities 
+- Discuss implementation possibilities and difficulties 
 
 
-### Meta-analysis AI performance in understudied fields (see @roth_etal21)
+### Meta-analysis AI performance in fields for which none exists (see @roth_etal21)
 - PTSD 
 - Delirium 
 - Substance use 
 
-### AI for EHR (electronic health records) handling 
+### AI for EHR (electronic health records) handling: Possibilities (review)
 
-
-### Interviews about implementation issues with practitioners 
+### Interviews about implementation possibilities and issues with practitioners (health care specialists, data scientists, (patients?))
 
 ### RCTs in mental health applications 
 - Physical health: Randomized controlled trials (RCTs) and prospective studies can bridge this gap between theory and practice, more
 rigorously demonstrating that AI models can have a quantifiable, positive impact when deployed in real healthcare settings [@rajpurkar_etal22]
 - currently largely missing for mental health applications 
-
 
 
 \newpage
