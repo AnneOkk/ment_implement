@@ -46,7 +46,9 @@ tablelist         : no
 footnotelist      : no
 
 classoption       : "man"
-output            : papaja::apa6_pdf
+output            : 
+  #papaja::apa6_pdf: default
+  word_document: default 
 header-includes:
   - |
     \makeatletter
@@ -62,11 +64,12 @@ header-includes:
 csl               : "../config/apa.csl" #< path to csl file
 documentclass     : "apa7"
 knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs") })
+  rmarkdown::render(inputFile, output_format = "all", encoding = encoding, output_dir = "../docs", output_file = "imp_issues") })
 ---
 
 ```{r setup, include = FALSE}
 library("papaja")
+library(googledrive)
 r_refs("r-references.bib")
 ```
 
@@ -81,7 +84,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - The International Medical Device Regulators Forum (IMDRF) has defined *Software* as a Medical Device as “software intended to be used for medical purposes that performs its objectives without being part of a hardware medical device.”
 - *Automation vs. decision support tasks*: 
     - Automation tasks are cases in which “a machine operates independently to complete a task,” whereas clinical decision support tasks are cases in which “a machine is concerned with providing information or assistance to the primary agent responsible for task completion.”
-
+- Digital data colleaction methods (the digital phenotype) []
 
 ## Issues in the implementation of AI in mental healthcare practice
 
@@ -102,7 +105,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
         - Another opportunity lies in leveraging the strength of deep neural networks that can operate without human oversight to identify novel biomarkers for detecting specific diseases (29)
         - When the results of ML algorithms are published, they must include information regarding the quality of the data used to train the model as well as any potential biases in it, which is rarely done at present.
 - Specificity vs sensitivity tradeoffs:
-    - e.g., However, the positive predictive value (PPV) (number of correctly predicted positive cases divided by the number of predicted positive cases) of prediction models for suicide attempts and deaths remains extremely low. In a systematic review of 17 studies, Belsher et al. found a PPV of ≤1% for suicide mortality despite good accuracy (≥80%) [193]. In other words, ML algorithms still deliver a high rate of false alarms despite a high level of accuracy [@roth_etal21]
+    - e.g., However, the positive predictive value (PPV) (number of correctly predicted positive cases divided by the number of predicted positive cases) of prediction models for suicide attempts and deaths remains extremely low. In a systematic review of 17 studies, Belsher et al. found a PPV of less than 1% for suicide mortality despite good accuracy (greater than or equal to 80%) [193]. In other words, ML algorithms still deliver a high rate of false alarms despite a high level of accuracy [@roth_etal21]
         - shown for multiple areas (assessment of suicide risk, depression, psychosis)
     - More complex ML models often have greater accuracy but lower interpretability
     - Generally, there is a trade-off between explainablity and performance. For instance, a constrained linear or bilinear model will fit many of these criteria, but the linear model does not warrant a good performance. Additionally, a model that is potentially explainable does not guarantee explainability. For example, co-dependence of input variables may make explanations ambiguous [@chen_etal22]
@@ -129,7 +132,6 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
     - However, none of these measures ultimately reflect what is most important to patients, namely whether the use of the model results in a beneficial change in patient care [@kelly_etal19, @shah_etal19]
     - possible solution: decision curve analysis 
     
-
 ## Ways out and forward 
 
 - When conducted with care for ethical considerations, ML research can become an essential complement to traditional psychotherapy research [@chekroud_etal21]
@@ -156,13 +158,14 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - The ultimate goal of RDoC is to find “new ways of classifying psychiatric diseases based on multiple dimensions of biology and behavior” [@chen_etal22]
 - Thanks to the advancement in cuttingedge techniques in ML/AI, psychiatrists and investigators now have an unprecedented opportunity to benefit from complex patterns in brain, behavior, and genes using machine learning tools [@chen_etal22]
 - Increasing evidence suggests that datadriven subtyping could drive novel neurobiological phenotypes associated with distinctive behavior and cognitive functioning
-- Chances for *precision psychiatyry*: categorization of psychiatric patients into new data-driven subgroups [@roth_etal21]
+- Chances for *precision psychiatry*: categorization of psychiatric patients into new data-driven subgroups [@roth_etal21]
     - less stigmatization
     - homogenous disease classification, early diagnosis, prediction of disease trajectory, and tailored, more effective, safer, and predictable treatment, potentially at the individual level
+    - As AI techniques continue to be refined and improved, it may be possible to define mental illnesses more objectively than the current DSM-5 classification schema [@graham_etal19]
 - Clinical decision support (CDS) provides clinicians with knowledge (e.g., treatment guidelines) and patient-specific information (e.g., clinical and laboratory data), specifically selected and presented in a timely fashion, to enhance the quality of medical care [@roth_etal21]
 
-        
 ### Importance of practitioner training: 
+
 - To improve understanding, medical students and practising clinicians should be provided with an easily accessible AI curriculum to enable them to critically appraise, adopt and use AI tools safely in their practice [@kelly_etal19]
 - Thus, it will be important for psychotherapy researchers to become better-versed in the ML methods and how to interpret this research literature [@chekroud_etal21]
 - Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
@@ -173,35 +176,36 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
   - 1) design and develop
     - The setting and funding of the team shapes many aspects of how the machine learning product is designed and developed.
     - For example, in an academic setting it may be easier to cultivate collaborations across domains of expertise early on in the process. However, academic settings may have difficulty recruiting and retaining the technical talent required to productise complex technologies.
-
   - 2) evaluate and validate
     - Clinical utility: can the product improve clinical care and patient outcomes?
     - Statistical validity: Can the machine learning product perform well on metrics of accuracy, reliability, and calibration?
     - Economic utility: Can there be a net benefit from the investment in the machine learning product?
-
   - 3) diffuse and scale
     - diffuse and scale across settings, which requires special attention to deployment modalities, funding, and drivers of adoption.
     - To scale, machine learning products must be able to ingest data from different EHR and must also support on-premise and cloud deployments. For this reason, many models are also distributed as stand-alone web applications that require manual entry to calculate risk.
-
   - 4) continuing monitoring and maintenance
     - Data quality, population characteristics, and clinical practice change over time and impact the validity and utility of models.
     - Model reliability and model updating are active fields of research and will be integral to ensure the robustness of machine learning products in clinical care.
-
-
-
 - machine learning technologies are referred to as products rather than models, recognising the significant effort required to productise and operationalise models that are often built primarily for academic purposes
 - The ‘inconvenient truth’ of machine learning in healthcare was pointedly described as “at present the algorithms that feature prominently in research literature are in fact not, for the most part, executable at the front lines of clinical practice.”
 - machine learning is initially expected to impact healthcare through augmenting rather than replacing clinical workflows
 - Machine learning technologies were included as case studies if they met two criteria: 1) they tackle a clinical problem using solely EHR data; and 2) they are evaluated and validated through direct integration with an EHR to demonstrate clinical, statistical, or economic utility
 - Case studies were selected amongst 1,672 presentations at 9 informatics and machine learning conferences between January 2018 and October 2019
 
+### Collaboration of AI system with Human Practitioner
+
+- "We have six specific vocal features that give us a read on if something needs to be paid attention to," Liu says. "Now, we're not diagnosing for depression; we're not diagnosing for anxiety, but these six features—voice smoothness, control, liveliness, energy, range, and clarity—are well-studied vocal features, and we understand what is in the normal range and what is not, based upon prior published research. What we're doing now is taking that product and putting it into clinical trial research, so that we can then see if we can align it to some of these other assessments that are well-accepted." (https://cacm.acm.org/magazines/2022/5/260347-artificial-intelligence-and-mental-health/fulltext)
+
+### Promising applications 
+
+- Accuracies ranged from the low 60s (62% from smartphone data [77] and
+63% from social media posts [79]) to high 90s (98% from clinical measures of physical function, body mass index, cholesterol, etc. [58] and 97% from sociodemographic variables and physical comorbidities [63]) for prediction of depression [@graham_etal19]
 
 ## Research Ideas
 
 ### Focus Group Psychiatrists 
 - Educate about chances and limitations 
 - Discuss implementation possibilities and difficulties 
-
 
 ### Meta-analysis AI performance in fields for which none exists (see @roth_etal21)
 - PTSD 
