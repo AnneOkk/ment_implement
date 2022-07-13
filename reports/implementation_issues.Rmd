@@ -163,9 +163,11 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
     - homogenous disease classification, early diagnosis, prediction of disease trajectory, and tailored, more effective, safer, and predictable treatment, potentially at the individual level
     - As AI techniques continue to be refined and improved, it may be possible to define mental illnesses more objectively than the current DSM-5 classification schema [@graham_etal19]
 - Clinical decision support (CDS) provides clinicians with knowledge (e.g., treatment guidelines) and patient-specific information (e.g., clinical and laboratory data), specifically selected and presented in a timely fashion, to enhance the quality of medical care [@roth_etal21]
+- Another perspective on precision psychiatry is presented by Bzdock and Meyer-Lindberg (2018). Both models contain similar concepts. Both start with a group of persons containing multiple traditional diagnoses. Bzdock and Meyer-Lindberg recognize that these psychiatric diagnoses are often artificial dichotomies. Machine learning is applied to diverse data from many sources and extracts hidden relationships [@bickman20]
 
 ### Importance of practitioner training: 
 
+- Overarching ethical issues and concerns include: harm prevention and various questions of data ethics; a lack of guidance on development of AI applications, their clinical integration and training of health professionals [@fiske_etal19]
 - To improve understanding, medical students and practising clinicians should be provided with an easily accessible AI curriculum to enable them to critically appraise, adopt and use AI tools safely in their practice [@kelly_etal19]
 - Thus, it will be important for psychotherapy researchers to become better-versed in the ML methods and how to interpret this research literature [@chekroud_etal21]
 - Accessible ML education and tool development is required to facilitate understanding and usage in the wider clinical research community. Besides formal education on ML in psychology graduate programs, it might also be helpful for psychotherapy researchers to attend (online and freely available) courses on ML [@chekroud_etal21]
@@ -192,9 +194,29 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - Machine learning technologies were included as case studies if they met two criteria: 1) they tackle a clinical problem using solely EHR data; and 2) they are evaluated and validated through direct integration with an EHR to demonstrate clinical, statistical, or economic utility
 - Case studies were selected amongst 1,672 presentations at 9 informatics and machine learning conferences between January 2018 and October 2019
 
+### Chances of AI in therapist training
+
+- Typical procedure: The supervisee tells the supervisor a brief narrative from memory (or notes) about clients in their caseload and may focus in detail on one or two cases, or perhaps a particularly difficult case. Occasionally, the supervisor and trainee may watch a session recording. Based on this information, the supervisor makes recommendations to the provider on future directions for treatment. Given various time constraints it is likely that the majority of cases are never discussed in detail. In addition, feedback only occurs after the completion of the therapy session [@imel_etal17]
+- Accordingly, counselors often work in a vacuum with little to no direct feedback or objective input on their work.
+- Across professions and tasks (e.g., sports, chess, etc.), performance-based feedback is critical to the development of expertise. Psychotherapists may receive supervision and feedback during their training, but it is rare for a therapist to receive detailed in-the-moment feedback on how exactly to respond to a difficult client, and how to select from different potential interventions
+- Tracey et al. (2014) note that specific, immediate feedback is precisely what is missing from the practice of psychotherapy and as a result “expertise” in psychotherapy is challenging to attain. This is consistent with a body of work that suggests individuals are poor evaluators of their own skill – generally and specifically within psychotherapy. For example, counselor reports of treatment procedures are unrelated to objective, third-party ratings of their practice (Santa Ana et al., 2008; Brosnan, Reynolds, & Moore, 2008).
+- new computational technologies may soon provide performance-based feedback, thereby improving the number of counselors who operate at full effective capacity. Over the past several years, machine learning technologies have been used to automatically generate session ratings that are competitive with human inter-rater reliability and proof-of-concept research has already been completed for a computational, clinical support tool that can provide automated feedback to counselors using Motivational Interviewing (Xiao et al., 2015; Gibson et al. 2016).
+- the same underlying technology that supports provider feedback could be used to provide clients summaries of sessions, skills discussed, key moments, etc. – effectively extending the therapeutic hour out into the client’s life. We might hypothesize that clients who actively utilize such support tools will be more engaged in treatment, learn new coping skills more quickly, and respond to treatment faster.
+
 ### Collaboration of AI system with Human Practitioner
 
 - "We have six specific vocal features that give us a read on if something needs to be paid attention to," Liu says. "Now, we're not diagnosing for depression; we're not diagnosing for anxiety, but these six features—voice smoothness, control, liveliness, energy, range, and clarity—are well-studied vocal features, and we understand what is in the normal range and what is not, based upon prior published research. What we're doing now is taking that product and putting it into clinical trial research, so that we can then see if we can align it to some of these other assessments that are well-accepted." (https://cacm.acm.org/magazines/2022/5/260347-artificial-intelligence-and-mental-health/fulltext)
+
+#### CORE-MI [@hirsch_etal18]
+
+![Core MI Architecture](../figs/core_mi.png)
+
+![Core MI Architecture](../figs/core_mi_report.png)
+
+#### TIM [@cummins_etal19]
+
+![TIM Architecture](../figs/ieso_1.png)
+
 
 ### Promising applications 
 
@@ -202,6 +224,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 63% from social media posts [79]) to high 90s (98% from clinical measures of physical function, body mass index, cholesterol, etc. [58] and 97% from sociodemographic variables and physical comorbidities [63]) for prediction of depression [@graham_etal19]
 
 ## Research Ideas
+
+### Implement practitioner feedback device - measure feedback acceptance and adherence with educated group vs. non-educated group - see CORE-MI: @hirsch_etal18
+
+![Core MI Architecture](../figs/core_mi.png)
+
+![Core MI Architecture](../figs/core_mi_report.png)
 
 ### Focus Group Psychiatrists 
 - Educate about chances and limitations 
@@ -220,7 +248,6 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - Physical health: Randomized controlled trials (RCTs) and prospective studies can bridge this gap between theory and practice, more
 rigorously demonstrating that AI models can have a quantifiable, positive impact when deployed in real healthcare settings [@rajpurkar_etal22]
 - currently largely missing for mental health applications 
-
 
 \newpage
 
