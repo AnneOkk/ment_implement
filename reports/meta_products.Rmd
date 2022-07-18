@@ -47,8 +47,7 @@ footnotelist      : no
 
 classoption       : "man"
 output            : 
-  #papaja::apa6_pdf: default
-  word_document: default 
+  papaja::apa6_pdf: default
 header-includes:
   - |
     \makeatletter
@@ -64,7 +63,7 @@ header-includes:
 csl               : "../config/apa.csl" #< path to csl file
 documentclass     : "apa7"
 knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, output_format = "all", encoding = encoding, output_dir = "../docs", output_file = "imp_issues") })
+  rmarkdown::render(inputFile, output_format = "all", encoding = encoding, output_dir = "../docs", output_file = "meta_products") })
 ---
 
 ```{r setup, include = FALSE}
@@ -81,16 +80,56 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 ## Introduction 
 
-Although mental healthcare has been slower to adapt AI technology compared to physical healthcare [@miller_brown18, @jiang_etal17], the number of AI-powered mental health applications is on the rise [@vaidyam_etal19]. Two types of applications, developed for different user groups, can be distinguished. The first group consists of applications used by the general public or patient groups, such as chatbots, digital phenotyping tools, and artificially intelligent virtual agents [@vaidyam_etal19, @fiske_etal19, @lydon-staley_etal19]. The second group of applications is used by mental healthcare practitioners and aims at increasing the quality of therapeutic interventions [@bickman20]. \\
+[INSERT: Explanation AI]
 
-Although there have been claims to recognize the benefits of integrating AI into mental healthcare with the aim of enhancing diagnosis, treatment, and clinical administration accuracy and quality [@shatte_etal19], many tools that have been tested in research have never reached the production phase [@lee_etal21, @sendak_etal20, @chekroud_etal21]. 
-This applies in particular to diagnostic and recommendation tools aiming at detecting psychological disorders and suggesting clinical treatment approaches (e.g., psychopharmacotherapy versus psychotherapy) [@chekroud_etal21]. 
-Reasons for the lack of implementation into clinical practice include patient data confidentiality issues, a lack of understanding and resulting scepticism to use AI tools on the part of mental health practitioners and related explainablity versus performance trade-offs, and the frequency of reported erroneous predictions (e.g., among underrepresented groups) [[@roth_etal21, @chen_etal22, @sendak_etal20, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21]. 
-In addition, mental disorders often have overlapping symptoms with other mental or physical conditions, adding an additional challenge to clear-cut diagnostic. \\
+Mental healthcare has been slower to adopt AI technology than physical healthcare [@miller_brown18, @jiang_etal17]. 
+Still, the number of AI-powered mental health applications has been rising over the past years [@vaidyam_etal19, @miller_polson19, @nahavandi_etal22]. 
+With increasing access to smartphones and the internet, digital mental health interventions hold the promise of treatment approaches disseminated to large populations    
 
-The current systematic review seeks to uncover the gap between the current state of research on the implementation of AI in mental health and the products available on the market.
-To this end, we conduct a systematic review of reviews on 
+Similar to physical health applications, there exists a gap between the AI algorithms and tools developed and tested in research and the available products ready to be used by patients and healthcare practitioners [see @vanleeuwen_etal21]. 
+Specifically, despite the indications of benefits associated with integrating AI into mental healthcare to enhance diagnosis, treatment, and clinical administration quality [@shatte_etal19], most of the tools and algorithms developed and tested in research have not (yet) made it into production [@lee_etal21, @sendak_etal20, @chekroud_etal21]. 
+In fact, "no FDA-approved or FDA-cleared AI applications currently exist in psychiatry" [@lee_etal21, p. 5]. 
+The lack of available products mainly concerns diagnostic and recommendation tools aiming at detecting psychological disorders and suggesting clinical treatment approaches (e.g., psychopharmacotherapy versus psychotherapy) [@chekroud_etal21]. 
+In their scoping review of machine learning in psychotherapy research, @aafjes-vandoorn_etal21 identified 51 studies that developed and tested a machine learning algorithm aiming to classify or predict treatment process or outcome data or identify clusters in the patient or treatment data.
+The authors conclude that current applications of machine learning in psychotherapy research provide a range of benefits for choosing appropriate treatment regimes, predicting treatment adherence, supporting therapist skill development, and predicting treatment response.
+@shatte_etal19 identified 190 mental health tools aiming to detect and diagnose mental health conditions, 67 focused on prognosis, treatment and support, 26 on public health applications, and 17 on research and clinical administration.
+These research findings do not align with the scope of marketed AI-based mental health products. 
+While most research focuses on detecting and diagnosing mental health conditions, the market is dominated by low-threshold wellness and treatment applications, such as chatbots and virtual agents, and sensor-data-based stress reduction applications [REF NEEDED].
+The main reasons for the lack of implementation into clinical practice include patient data confidentiality issues, explainability versus performance trade-offs, and the frequency of erroneous predictions (e.g., among underrepresented groups) [@roth_etal21, @chen_etal22, @sendak_etal20, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21]. 
+In addition, mental health interventions often rely on the relational bond formed with the patient and the direct observation of patient behaviors and emotions and are hesitant to rely on AI recommendations [@shatte_etal19].  \\
 
+Despite the public attention devoted to the risks and potential benefits of AI-based mental health applications [MAYBE SOME NEWS ARTICLES], an overview of available AI-supported mental health products is currently lacking.
+In addition, we lack insight into the gap between research findings on AI-based mental health tools and marketed products in the field. 
+Such an insight may provide a starting point for a systematic reduction of implementation barriers on the side of health care practitioners, application developers, and the general public, including patients suffering from mental health conditions. 
+The current systematic review proceeds in two steps to answer these questions.
+First, we provide an overview of available AI-powered mental health products. 
+Herein, we include products developed for the general public, patients, and mental health practitioners. 
+We will search [BRIEFLY DESCRIBE SEARCH STRATEGY]...
+Second, we will compare the available products with the current state of AI-based research in detection and diagnosis, prognosis, treatment and support, public health applications, and clinical administration [@shatte_etal19]. \\
+
+
+## Questions 
+
+- How to find products?
+  - exhibitor lists [@vanleeuwen_etal21]
+  - marketplace offerings [@vanleeuwen_etal21]
+  - monitoring news sources [@vanleeuwen_etal21]
+- Narrow down focus? - depression and anxiety? Only patients or general public? 
+
+## Inclusion criteria
+- "In Europe, the CE mark is a prerequisite for medical devices to be allowed on the market; therefore, CE marking of the product by April 2020 was a requirement for inclusion" [@vanleeuwen_etal21]
+  - CE mark by July 2022
+- "Also, the product had to be vendor neutral and aid the radiologist in image interpretation in clinical practice."
+  - vendor neutral?
+  - aid the mental health practitioner in 
+    - a) prognosis
+    - b) detection/ diagnosis
+    - c) treatment selection 
+    - d) treatment 
+    - e) predicting treatment outcome
+    - f) therapist skill development 
+  - OR: provide service to patient in terms of
+    - a) mental healthcare service
 
 
 
