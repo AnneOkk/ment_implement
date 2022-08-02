@@ -1,0 +1,132 @@
+---
+title             : "Students' attitudes towards AI in Psychiatry"
+shorttitle        : "AI in Psychiatry"
+
+author: 
+  - name          : "Anne-Kathrin Kleine"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : ""
+    email         : "Anne-Kathrin.Kleine@psy.lmu.de"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : ""
+    affiliation   : ""
+    role:
+      - ""
+      - ""
+
+affiliation:
+  - id            : "1"
+    institution   : "LMU"
+  - id            : ""
+    institution   : ""
+
+authornote: |
+  LMU
+
+abstract: |
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "AI, Students, Mental Health, Products"
+wordcount         : "X"
+
+bibliography      : "../config/LMU_AI_Team.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : 
+  papaja::apa6_pdf: default
+header-includes:
+  - |
+    \makeatletter
+    \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-1em}%
+      {\normalfont\normalsize\bfseries\typesectitle}}
+    \renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+      {-\z@\relax}%
+      {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+    \makeatother
+csl               : "../config/apa.csl" #< path to csl file
+documentclass     : "apa7"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, output_format = "all", encoding = encoding, output_dir = "../docs", output_file = "meta_products") })
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library(googledrive)
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+
+The application of AI technology in mental healthcare is on the rise [@miller_brown18, @jiang_etal17]. 
+Although many applications are still in the development phase, a number of AI products that aid diagnosing and treating mental illnesses, selecting appropriate treatment approaches, predicting treatment success, and improving psycho-therapeutic interventions are already available to mental health professionals [@hirsch_etal18, @megerian_etal22, @cummins_etal19]. 
+In view of the large number of registered patents, the number of AI applications in the mental health sector may be expected to increase further over the next years [@zheng_etal22].
+
+
+
+
+
+
+
+
+
+Still, the number of AI-powered mental health applications has been rising over the past years [@vaidyam_etal19, @miller_polson19, @nahavandi_etal22]. 
+
+the emerging fields of artificial intelligence (AI) and especially deep learning have attracted a
+great deal of attention in radiology [1–3]. These techniques
+have mainly been employed for visual tasks such as classification of images (e.g. diagnosis on chest X-rays) or automated
+segmentation of regions of interest in an image (e.g. segmentation of tumour tissue in brain MRI) [4]. Even major news
+outlets referred to these topics, most prominently with various
+newspapers echoing the claim that algorithms potentially outperform human radiologists in recognising pneumonia
+
+## Literature Review 
+
+### Attitudes towards AI in radiology
+
+@pintodossantosMedicalStudentsAttitude2019:
+
+- The first section was aimed at evaluating whether the students had already heard
+of deep learning and AI in the context of radiology and whether they felt they had a basic grasp of the underlying technologies
+- The second section was introduced with a statement that AI is already being employed in relatively common software such as speech- and text-recognition, spam-filters and recommendation algorithms. The respondents were then asked to state whether or not they had already heard this in the media, on social media, during lectures or from friends/family
+- In the third and fourth sections, the students were presented with various statements and asked to indicate their level of agreement on a four-point Likert scale (disagree entirely, rather disagree, rather agree, or agree entirely). While the third section aimed at specific possible applications of AI in radiology, the fourth section had a broader scope and tried to assess the students’ general fear of algorithms replacing human radiologists and other physicians.
+- The last section consisted of questions regarding respondent demographics as well as one question regarding whether the respondents considered themselves tech-savvy or not
+
+### Recruitment 
+- [@pintodossantosMedicalStudentsAttitude2019]:
+    - The questionnaire was sent out via email and advertised on social media to undergraduate medical students at three major German universities (University of Cologne, University of Bonn, University of Mainz). Participation was voluntary and had no relation to the students’ curricular activities. The students were informed that the results of the survey would be used for further statistical evaluation and scientific publication. Respondent anonymity was guaranteed by design.
+
+```{r}
+library(haven)
+model_pred <- haven::read_dta("../ai_model_predictions.dta")
+```
+
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
