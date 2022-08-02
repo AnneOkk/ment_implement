@@ -96,7 +96,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - ethical challenges:
     - responsibility [@chekroud_etal21]
     - dehuminization [@chekroud_etal21]
-    - in clinical settings: transparency highly values - opposing black box problem [@chekroud_etal21]
+    - in clinical settings: transparency highly valued - opposing black box problem [@chekroud_etal21]
     - erronous outcomes for underrepresented groups [@chekroud_etal21]
     - misuse of personal and sensitive data [@chekroud_etal21]
 - diagnostic challenges [@lee_etal21]

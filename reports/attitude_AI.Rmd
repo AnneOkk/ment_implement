@@ -81,27 +81,68 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 # Introduction
 
 The application of AI technology in mental healthcare is on the rise [@miller_brown18, @jiang_etal17]. 
-Although many applications are still in the development phase, a number of AI products that aid diagnosing and treating mental illnesses, selecting appropriate treatment approaches, predicting treatment success, and improving psycho-therapeutic interventions are already available to mental health professionals [@hirsch_etal18, @megerian_etal22, @cummins_etal19]. 
-In view of the large number of registered patents, the number of AI applications in the mental health sector may be expected to increase further over the next years [@zheng_etal22].
+Although many applications are still in development, several AI products that aid in diagnosing and treating mental illnesses, selecting appropriate treatment approaches, predicting treatment success, and improving psycho-therapeutic interventions are already available to mental health professionals [@hirsch_etal18, @megerian_etal22, @cummins_etal19]. 
+Given the large number of registered patents related to identifying and diagnosing psychiatric illnesses, the number of AI applications in the mental health sector may be expected to increase further over the following years [@zheng_etal22].
+
+# The application of AI technology in mental health care
+
+The application of AI technology in mental healthcare ranges from selecting appropriate treatment regimens to supporting therapist skill development. 
+In their scoping review of machine learning in psychotherapy research, @aafjes-vandoorn_etal21 identified 51 studies that developed and tested a machine learning algorithm focused on selecting appropriate treatment regimes, predicting treatment adherence and response, and therapist skill development. 
+@shatte_etal19 identified 190 mental health tools focused on detecting and diagnosing mental health conditions, 67 on prognosis, treatment, and support, 26 on public health applications, and 17 on research and clinical administration.
+In the following, we provide a brief overview of how AI technology is used in the areas of a) assistance with detection, diagnosis, and prognosis, b) assistance with treatment and treatment selection, and c) improvement of psychotherapy quality and therapist skill development.
+Detailed descriptions of AI technologies relevant for clinical practice in the different areas of mental health care have been provided elsewhere [e.g., @lee_etal21].
+
+## Assistance with detection, diagnosis, and prognosis 
+
+## Assistance with treatment and treatment selection
+
+## Improvement of psychotherapy quality 
+
+Supervision and receiving performance-feedback on their therapy sessions supports psychotherapy trainees' acquisition of skills and increases retention [@tanana_etal19, @moyers_etal05, @helgeronnestad_ladany06]. 
+However, the process of providing ongoing feedback is labor intensive and thus rarely used in training. 
+Feedback is often based on trainees' self-reports and usually only available long after the actual performance [@tanana_etal19]. 
+Using artificial intelligence technology for training purposes in mental health care may leverage the problem by providing immediate and performance-specific feedback to psychotherapists and trainees. \\
+
+Most of the tools developed to improve psychotherapy quality rely on natural language processing-based feedback [e.g., @atkins_etal14, @hirsch_etal18, @cummins_etal19, @can_etal16, @tanana_etal19]. 
+For example, _TIM_ (Therapy Insights Model) uses real-time chat messages exchanged between therapists and patients to provide therapists with feedback regarding the topics that were sufficiently covered in the session and the topics that should be addressed in the next sessions [@cummins_etal19].  
+_CORE-MI_ (Counselor Observer Ratings Expert for Motivational Interviewing uses audio recordings of motivational interviewing (MI) sessions to generate feedback on psychotherapists' adherence with MI principles. 
+The user receives feedback on six summary measures of MI fidelity: empathy, MI spirit, reflection-to-question ratio, percent open questions, percent complex reflections, and percent MI adherence. 
+_CORE-MI_ includes a visual summary of counseling sessions based on the fidelity assessment that may be used by the therapist to improve their MI performance [@hirsch_etal18]. 
+Similar tools include the _ClientBot_, a training tool that mimics typical patient responses to therapist questions and provides real-time feedback on therapists' use of open questions and reflections [@tanana_etal19]; or _Partner_, a reinforcement learning agent that may increase the quality of mental health support conversations by suggesting sentence-level edits to posts that enhance the level of empathy while maintaining conversation quality [@sharma_etal21]. 
+
+# Reservations against the application of AI technology in mental health practice
+
+There is a general consensus that AI technology will transform the clinical practice of health care practitioners and 
+
+Thus far, no insight has been gained on mental health practitioners' 
+Research findings about radiologists' attitudes towards the implementation of AI technology in their practice are inconclusive. One study suggests that despite the strong belief in the efficiency of AI tools, only a minority (a quarter) of health care practitioners believes that AI tools can be trusted [@jungmann_etal20]. Other research findings suggest generally positive attitudes towards the application of AI in radiology [e.g., @codari_etal19]. 
+
+
+Despite a large amount of research in the area of mental health AI technology, many of the algorithms developed and tested in research have not yet been integrated into clinical care [@sendak_etal20].
+Reasons for this research-practice gap include technical difficulties and the black box problem of AI-based recommendations. 
+Technical difficulties primarily complicate the use of AI tools in diagnosis and prognosis and selecting treatment approaches. They encompass, for example, the inaccuracy of predictions, accuracy-interpretability tradeoffs, data privacy issues, and the difficulty of deriving clear-cut diagnoses in the light of ambiguous symptomatology or symptoms overlapping with other (mental) illnesses [@lee_etal21, @roth_etal21, @chen_etal22, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21]. \\
+
+In addition, is often not apparent to clinicians how AI-based recommendations are generated.
+Despite the efforts made to enhance the explainability of AI recommendations, such as the Explainable Artificial Intelligence (XAI) Initiative, the complexity of deep learning approaches necessarily limits the extent to which they can be made accessible to a broader user group [@feldman_etal19]. 
+Especially in the area of mental health care, where transparency and the explainability of clinical decision-making are highly valued, the black box problem of AI-based recommendations creates a significant obstacle against its adoption into clinical practice [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19].
+
+
+# The relationship between AI knowledge and attitudes towards the application of AI technology in mental health care 
+
+Technical difficulties concerning the generation of accurate predictions and a seamless adoption of AI tools into clinical practice may be and will be addressed by data scientists and mental health experts over the coming years. 
+It has been suggested that reluctance against the adoption of new technology remains high as long as there is a lack of understanding on the practitioner side [@feldman_etal19]. \\
+
+
+
+
+A basic understanding how AI recommendations are generated makes it easier for clinicians to a) explain their decisions to patients and stakeholders, b) make fewer errors in using the generated information in their practice, c) provide feedback to help improving AI-based diagnostic and treatment tools, d) improve their professional skills [@adadi_berrada18].
 
 
 
 
 
 
-
-
-
-Still, the number of AI-powered mental health applications has been rising over the past years [@vaidyam_etal19, @miller_polson19, @nahavandi_etal22]. 
-
-the emerging fields of artificial intelligence (AI) and especially deep learning have attracted a
-great deal of attention in radiology [1–3]. These techniques
-have mainly been employed for visual tasks such as classification of images (e.g. diagnosis on chest X-rays) or automated
-segmentation of regions of interest in an image (e.g. segmentation of tumour tissue in brain MRI) [4]. Even major news
-outlets referred to these topics, most prominently with various
-newspapers echoing the claim that algorithms potentially outperform human radiologists in recognising pneumonia
-
-## Literature Review 
+## OTHER (ignore part below)
 
 ### Attitudes towards AI in radiology
 
