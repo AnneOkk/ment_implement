@@ -165,6 +165,9 @@ Second, we will compare the available products with the current state of AI-base
 
 ![Validation types](../figs/valtypes.png){height=60%}
 
+## Examples of successful implementation
+
+@cecula_etal21: For example, Chekroud et al. (2016) conducted a pattern recognition study in a sample of 1,949 individuals within a clinical trial (Star-D) (Rush et al. 2006) of citalopram. Using a pipeline consisting of k-fold CV with elastic net regression, they detected a parsimonious predictive pattern of 25 clinical questionnaire items from a total of 164 patient-reportable variables. These variables predicted clinical remission at a rate of 65%, which was more than 30% above the base rate of predicted efficacy for the drug. The generalizability of the models was further demonstrated by their ability to predict remission in a completely different sample, and the validity of the models was highlighted by their specificity when they did not generalize to other pharmaceutical treatments. Notably, the high generalizability of the predictions, together with further research (Chekroud et al. 2017), facilitated the rapid translation of the models into a web-based application designed to provide decision support to primary health care providers and clients (https://www.springhealth.com). This machine learning service is now being prospectively trialed in hospital settings, thus further highlighting the possibility of direct research translation.
 
 ## Questions 
 
