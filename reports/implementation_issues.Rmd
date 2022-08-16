@@ -112,6 +112,8 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 - Furthermore, each mental disorder has various types of overlapping symptoms with varying degrees, bringing an additional challenge to uniquely define the disorder in psychiatry (unlike a clear cut in cardiology or oncology) [@chen_etal22]
 - many mental disorders have overlapping symptoms with other physical or mental disorders [@chen_etal22]
 
+- relevant review: 
+
 ## Issues in application research 
 
 - few studies test algorithms in independent samples [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19]
