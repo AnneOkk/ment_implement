@@ -107,8 +107,29 @@ Second, we will compare the available products with the current state of AI-base
 
 ![AI Mental Health patents, services, and research](../figs/landscape.png)
 
+@cecula_etal21: Irrespective of the generalizability of a technique, many methods are unlikely to be implemented in health care settings simply because they are unavailable, they require too much training, or most importantly, they are not commercially viable. Moving forward, it is therefore important to consider the real-world practicality of translating a technique rather than the theoretical possibility that this might be possible at some (undefined) future time. This necessarily involves the contributions of clinicians and clinical researchers, so that the methodological advances are coupled with similarly advanced clinical reasoning to improve the efficacy of current clinical pathways.
 
-## Inclusion criteria
+A second major barrier in the translation of machine learning methods is that the techniques are unnecessarily difficult to understand and implement for many clinicians and clinical researchers. This review has attempted to provide an understanding of critical techniques, and there are some excellent textbooks that can assist researchers with statistical knowledge (e.g., James et al. 2015). An important additional direction of research is the creation of software that does not require advanced programming skills (e.g., PRoNTO; http://www.mlnl.cs.ucl.ac.uk/pronto/). One such software package that was specifically developed to help clinical psychologists and psychiatrists answer questions introduced in this review is available from our group and is called NeuroMiner (https://www.pronia.eu/neurominer/). Using this tool, researchers can employ various CV schemes, implement preprocessing, choose a machine learning algorithm, and interpret the models with a graphical interface. This software has demonstrated its usefulness in a number of studies as an in-house tool (Koutsouleris et al. 2009, 2015, 2016), across a large-scale consortium-based project (PRONIA; https://www.pronia.eu/), and in collaborative research with other laboratories (Opel et al. 2017).
+
+
+## Inclusion/ exclusion criteria meta review
+
+- systematic reviews or meta-analyses focused on machine learning system aimed at:
+    - detection/ diagnosis 
+    - treatment selection 
+    - treatment 
+    - practitioner training/ care quality improvement in the mental healthcare domain 
+- system to be used by primary healthcare provider (no chatbots, apps for general public)
+- detection/ diagnosis, treatment selection, treatment focused on DSM-5 diagnosis (excluding neurocognitive disorders like dementia)
+- adults (18 years or older)
+- not merely algorithm development, but tested
+- published in English or German 
+- database readily available to clinician 
+- if multiple conditions compared for performance, average performance indicator used (e.g., @zhou_etal15 indicated performance for identification of patients vs controls based on positive, neutral, and negative mood)
+
+
+## Inclusion/ exclusion criteria product 
+
 - "In Europe, the CE mark is a prerequisite for medical devices to be allowed on the market; therefore, CE marking of the product by April 2020 was a requirement for inclusion" [@vanleeuwen_etal21]
   - CE mark not relevant for mental health applications? 
   - Alternatives?
@@ -121,7 +142,7 @@ Second, we will compare the available products with the current state of AI-base
     - c) treatment selection 
     - d) treatment 
     - e) predicting treatment outcome
-    - f)skill development 
+    - f) skill development 
 - "To perform a balanced evaluation, we considered suite components as separate products" [@vanleeuwen_etal21]
 
 ## Procedure

@@ -148,6 +148,8 @@ _Hypothesis 1:_: There is a positive relationship between the knowledge about AI
 _Hypothesis 2:_: The positive relationship between the knowledge about AI tools used in different mental health areas and positive attitudes towards the application of AI technology in these areas is attenuated by perceived threats to a) the need for autonomy, b) the need for competence, c) the need for relatedness posed by AI technology in the respective mental health area.  
 
 
+# 
+
 # Potential control variables (Other predictors of AI attitudes)
 
 - personality [@park_woo22]
