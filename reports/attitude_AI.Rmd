@@ -148,7 +148,11 @@ _Hypothesis 1:_: There is a positive relationship between the knowledge about AI
 _Hypothesis 2:_: The positive relationship between the knowledge about AI tools used in different mental health areas and positive attitudes towards the application of AI technology in these areas is attenuated by perceived threats to a) the need for autonomy, b) the need for competence, c) the need for relatedness posed by AI technology in the respective mental health area.  
 
 
-# 
+# Experimental setup 
+
+The ability to interpret AI algorithms' mistakes and formulate the best strategies to correct these applications requires specialized training. Consequently, medical and health informatics education must emphasize algorithm-based platforms, and include relevant data analytics and AI topics in their curricula. Moreover, computer science and health informatics programs should consist of health care–focused digital skills training.
+
+Medical students need to become familiar with clinical AI applications and predictive modeling techniques to assess biased data and evaluate innovative AI technologies.
 
 # Potential control variables (Other predictors of AI attitudes)
 

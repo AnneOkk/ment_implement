@@ -112,20 +112,31 @@ Second, we will compare the available products with the current state of AI-base
 A second major barrier in the translation of machine learning methods is that the techniques are unnecessarily difficult to understand and implement for many clinicians and clinical researchers. This review has attempted to provide an understanding of critical techniques, and there are some excellent textbooks that can assist researchers with statistical knowledge (e.g., James et al. 2015). An important additional direction of research is the creation of software that does not require advanced programming skills (e.g., PRoNTO; http://www.mlnl.cs.ucl.ac.uk/pronto/). One such software package that was specifically developed to help clinical psychologists and psychiatrists answer questions introduced in this review is available from our group and is called NeuroMiner (https://www.pronia.eu/neurominer/). Using this tool, researchers can employ various CV schemes, implement preprocessing, choose a machine learning algorithm, and interpret the models with a graphical interface. This software has demonstrated its usefulness in a number of studies as an in-house tool (Koutsouleris et al. 2009, 2015, 2016), across a large-scale consortium-based project (PRONIA; https://www.pronia.eu/), and in collaborative research with other laboratories (Opel et al. 2017).
 
 
-## Inclusion/ exclusion criteria meta review
+## Inclusion/ exclusion criteria meta-review
 
 - systematic reviews or meta-analyses focused on machine learning system aimed at:
     - detection/ diagnosis 
     - treatment selection 
     - treatment 
-    - practitioner training/ care quality improvement in the mental healthcare domain 
+    - practitioner training/ care quality improvement in the mental healthcare  
+- We defined a study to be an instance of machine learning when a non-regression statistical technique was used to develop or validate a prediction model. Therefore we excluded studies using only linear regression, logistic regression, lasso regression, ridge regression, or elastic net
 - system to be used by primary healthcare provider (no chatbots, apps for general public)
-- detection/ diagnosis, treatment selection, treatment focused on DSM-5 diagnosis (excluding neurocognitive disorders like dementia)
-- adults (18 years or older)
+- detection/ diagnosis, treatment selection, treatment focused on DSM-5 diagnosis 
+- excluding neurocognitive disorders like dementia
+- excluding comorbid genetic disorders like Down's syndrome [e.g., @bruining_etal14]
+- studies published in peer reviewed journals, to ensure replicability of the search procedures; We thus excluded book chapters, dissertations and other gray literature, including symposium and conference proceedings.
 - not merely algorithm development, but tested
 - published in English or German 
 - database readily available to clinician 
 - if multiple conditions compared for performance, average performance indicator used (e.g., @zhou_etal15 indicated performance for identification of patients vs controls based on positive, neutral, and negative mood)
+- if goal was to differentiate individuals based on mental disease, we listed disease targeted as "multiple" 
+- if multiple external validation datasets were used, we collected the results from the largest validation dataset (e.g., @yahata_etal16)
+- for psychotherapy studies: studies on alternative forms of therapy, such as art therapy [@kim08] or electro-compulsive therapy [@redlich_etal16], or non-therapy interactions, such as peer-topeer support [@jaroszewski_etal19] and primary care visits [@park_etal19]
+- no children; 14 years or older; not excluded if mean age of training dataset was > 14 years
+    - e.g., @plitt_etal15: Presently, it is unclear whether existing classifiers are merely detecting circuit-level consequences of living with ASD for many years. The possible age-dependence of rs-fMRI based classifiers may hinder the generalizability of a given classifier across age and underscores the need to evaluate developmental disorders in a developmental context [@dosenbach_etal10, @karmiloff-smith13]
+    - @choi_etal18: Among the 1016,583 subjects, we included 819,951 subjects after
+excluding 196,632 subjects who were 14 years old or younger (prediction of 10 year suicidality)
+- if multiple datasets was used for training the model, we report informationf or the combined dataset [e.g., @plitt_etal15]
 
 
 ## Inclusion/ exclusion criteria product 
@@ -146,6 +157,17 @@ A second major barrier in the translation of machine learning methods is that th
 - "To perform a balanced evaluation, we considered suite components as separate products" [@vanleeuwen_etal21]
 
 ## Procedure
+
+### Collect information on AI in mental health research 
+
+- coding scheme development based on @brown_etal03
+
+
+### Quality assessment studies 
+
+- based on PROBAST [@navarro_etal21, @moons_etal19]
+- We removed signalling question 4.9, “Do predictors and their assigned weights in the final model correspond to the results from the reported multivariable analysis?” because it applies to regression based studies [@navarro_etal21]
+
 
 ### Collect information on AI Mental Health Products
 
