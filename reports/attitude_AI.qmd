@@ -1,0 +1,130 @@
+---
+title: "Students' attitudes towards AI in Psychiatry"
+bibliography: "../config/LMU_AI_Team.bib"
+csl: "../config/apa.csl"
+shorttitle: "AI in Psychiatry"
+author: "Anne-Kathrin Kleine"
+format: 
+  docx:
+    reference-doc: "../config/template_word.docx"
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+```
+
+# Introduction
+
+The application of AI technology in mental healthcare is on the rise [@miller_brown18, @jiang_etal17]. 
+Although many applications are still in development, several AI products that aid in diagnosing and treating mental illnesses, selecting appropriate treatment approaches, predicting treatment success, and improving psycho-therapeutic interventions are already available to mental health professionals [@hirsch_etal18, @megerian_etal22, @cummins_etal19]. 
+Given the large number of registered patents related to identifying and diagnosing psychiatric illnesses, the number of AI applications in the mental health sector may be expected to increase further over the following years [@zheng_etal22].
+
+# The application of AI technology in mental health care
+
+The application of AI technology in mental healthcare ranges from selecting appropriate treatment regimens to supporting therapist skill development. 
+In their scoping review of machine learning in psychotherapy research, @aafjes-vandoorn_etal21 identified 51 studies that developed and tested a machine learning algorithm focused on selecting appropriate treatment regimes, predicting treatment adherence and response, and therapist skill development. 
+@shatte_etal19 identified 190 mental health tools focused on detecting and diagnosing mental health conditions, 67 on prognosis, treatment, and support, 26 on public health applications, and 17 on research and clinical administration.
+In the following, we provide a brief overview of how AI technology is used in the areas of a) assistance with detection, diagnosis, and prognosis, b) assistance with treatment and treatment selection, and c) improvement of psychotherapy quality and therapist skill development.
+Detailed descriptions of AI technologies relevant for clinical practice in the different areas of mental health care have been provided elsewhere [e.g., @lee_etal21].
+
+## Assistance with detection, diagnosis, and prognosis 
+
+## Assistance with treatment and treatment selection
+
+## Improvement of psychotherapy quality 
+
+Supervision and receiving performance-feedback on their therapy sessions supports psychotherapy trainees' acquisition of skills and increases retention [@tanana_etal19, @moyers_etal05, @helgeronnestad_ladany06]. 
+However, the process of providing ongoing feedback is labor intensive and thus rarely used in training. 
+Feedback is often based on trainees' self-reports and usually only available long after the actual performance [@tanana_etal19]. 
+Using artificial intelligence technology for training purposes in mental health care may leverage the problem by providing immediate and performance-specific feedback to psychotherapists and trainees. 
+
+Most of the tools developed to improve psychotherapy quality rely on natural language processing-based feedback [e.g., @atkins_etal14, @hirsch_etal18, @cummins_etal19, @can_etal16, @tanana_etal19]. 
+For example, _TIM_ (Therapy Insights Model) uses real-time chat messages exchanged between therapists and patients to provide therapists with feedback regarding the topics that were sufficiently covered in the session and the topics that should be addressed in the next sessions [@cummins_etal19]. _CORE-MI_ (Counselor Observer Ratings Expert for Motivational Interviewing uses audio recordings of motivational interviewing (MI) sessions to generate feedback on psychotherapists' adherence with MI principles. 
+The user receives feedback on six summary measures of MI fidelity: empathy, MI spirit, reflection-to-question ratio, percent open questions, percent complex reflections, and percent MI adherence. 
+_CORE-MI_ includes a visual summary of counseling sessions based on the fidelity assessment that may be used by the therapist to improve their MI performance [@hirsch_etal18]. Similar tools include the _ClientBot_, a training tool that mimics typical patient responses to therapist questions and provides real-time feedback on therapists' use of open questions and reflections [@tanana_etal19]; or _Partner_, a reinforcement learning agent that may increase the quality of mental health support conversations by suggesting sentence-level edits to posts that enhance the level of empathy while maintaining conversation quality [@sharma_etal21]. 
+
+# Concerns regarding the application of AI technology in mental health practice
+
+Thus far, insight into health practitioners' attitudes towards the application of AI technology is limited to the physical health domain, with inconclusive results [@gong_etal19, @codari_etal19, @jungmann_etal20, @pintodossantos_etal19]. 
+One study suggests that despite the strong belief in the efficiency of AI tools, only a minority (a quarter) of radiologists in the sample believed that AI tools can be trusted [@jungmann_etal20]. 
+Other research findings suggest generally positive attitudes towards the application of AI in radiology [e.g., @codari_etal19].
+
+Despite a large amount of research in the area of mental health AI technology, many of the algorithms developed and tested in research have not yet been integrated into clinical care [@sendak_etal20].
+Reasons for this research-practice gap include technical difficulties and the black box problem of AI-based recommendations. 
+Technical difficulties primarily complicate the use of AI tools in diagnosis and prognosis and selecting treatment approaches. They encompass, for example, the inaccuracy of predictions, accuracy-interpretability tradeoffs, data privacy issues, and the difficulty of deriving clear-cut diagnoses in the light of ambiguous symptomatology or symptoms overlapping with other (mental) illnesses [@lee_etal21, @roth_etal21, @chen_etal22, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21]. 
+
+In addition, is often not apparent to clinicians how AI-based recommendations are generated.
+Despite the efforts made to enhance the explainability of AI recommendations, such as the Explainable Artificial Intelligence (XAI) Initiative, the complexity of deep learning approaches necessarily limits the extent to which they can be made accessible to a broader user group [@feldman_etal19]. 
+Especially in the area of mental health care, where transparency and the explainability of clinical decision-making are highly valued, the black box problem of AI-based recommendations creates a significant obstacle against its adoption into clinical practice [@aafjes-vandoorn_etal21, @chekroud_etal21, @kelly_etal19].
+
+## Concerns among medical and psychology students and early practitioners
+
+_Research Question 1_: Are there any differences in the attitude towards the application of AI technology in mental health care between medical students and psychology students? 
+
+# The relationship between AI knowledge and attitudes towards the application of AI technology in mental health care 
+
+Technical difficulties concerning the generation of accurate predictions and a seamless adoption of AI tools into clinical practice may be and will be addressed by data scientists and mental health experts over the coming years. 
+It has been suggested that reluctance against the adoption of new technology remains high as long as there is a lack of understanding on the practitioner side [@feldman_etal19].
+
+A basic understanding how AI recommendations are generated makes it easier for clinicians to a) explain their decisions to patients and stakeholders, b) make fewer errors in using the generated information in their practice, c) provide feedback to help improving AI-based diagnostic and treatment tools, d) improve their professional skills [@adadi_berrada18].
+
+_Hypothesis 1:_: There is a positive relationship between the knowledge about AI tools used in a) assistance with detection, diagnosis, and prognosis, b) assistance with treatment and treatment selection, and c) improvement of psychotherapy quality and positive attitudes towards the application of AI technology in the respective area.
+
+
+# The moderating role of need satisfaction
+
+![Need satisfaction scale](../figs/need_sat.png)
+
+- Idea: Adapt scale items to need satisfaction threat in future job; for example:
+  - "I feel that AI tools used to [area of mental health] will make it more difficult to express my ideas and opinions in this job."
+  - "AI tools used to [area of mental health] will make it more difficult to be myself at my job."
+
+
+_Hypothesis 2:_: The positive relationship between the knowledge about AI tools used in different mental health areas and positive attitudes towards the application of AI technology in these areas is attenuated by perceived threats to a) the need for autonomy, b) the need for competence, c) the need for relatedness posed by AI technology in the respective mental health area.  
+
+
+# Experimental setup 
+
+The ability to interpret AI algorithms' mistakes and formulate the best strategies to correct these applications requires specialized training. Consequently, medical and health informatics education must emphasize algorithm-based platforms, and include relevant data analytics and AI topics in their curricula. Moreover, computer science and health informatics programs should consist of health care–focused digital skills training.
+
+Medical students need to become familiar with clinical AI applications and predictive modeling techniques to assess biased data and evaluate innovative AI technologies.
+
+# Potential control variables (Other predictors of AI attitudes)
+
+- personality [@park_woo22]
+
+## AI Attitudes
+
+- affectice, cognitive, behavioral attitudes [@park_woo22]
+  - affective: Positive emotional attitude (or positive emotion) was measured with four emotions: excitement, amusement, happiness, and surprise. Negative emotional attitude (or negative emotion) was measured with four emotions: unease, confusion, fear, and disappointment. 
+  - cognitive: Needs satisfaction was assessed with six items measuring each of the following three needs with two items: autonomy, competence, and relatedness. Consistent with the literature where need satisfaction is measured within a specific domain such as work (Broeck et  al., 2010), we modified items to make it directly applicable to AI. We used a general basic needs satisfaction measure validated in Korean (Lee & Kim, 2008) and among original 18 items, we used six items due to survey length constraints. For example, “AI would allow me to decide things for myself and think more independently (autonomy), “Using AI would make me feel more capable and effective in performing tasks (competence)” and “Using AI would help me to build more reliable relationships with others (relatedness).” The items were rated on a 7-point Likert scale (1=Strongly Disagree, 7=Strongly Agree). Our data showed adequate levels of internal consistency reliability for all three needs (α = .78 for autonomy need satisfaction, α = .66 for competence need satisfaction, and α = .89 for relatedness need satisfaction).
+  - emotional and competence: The warmth perception was measured with two items (α = .72) and competence perception was measured with two items (α = .81) developed by Fiske and colleagues (2002). The items have shown evidence of being a valid and reliable scale among Korean participants (Kim et al., 2019). Example items include “I think that AI is warm (warmth perception)” and “I think that AI is efficient (competence perception).” These items were rated on a 5-point Likert scale (1 = Strongly Disagree, 5 = Strongly Agree). In addition, behavioral intent to use AI, which has been widely used in prior studies (e.g. Venkatesh & Davis, 2000), was measured with the following item on a 7-point Likert scale (1 = Strongly Disagree, 7 = Strongly Agree). The item is “I intend to use products and service using AI.”
+  
+
+
+### Attitudes towards AI in radiology
+
+- The first section was aimed at evaluating whether the students had already heard
+of deep learning and AI in the context of radiology and whether they felt they had a basic grasp of the underlying technologies
+- The second section was introduced with a statement that AI is already being employed in relatively common software such as speech- and text-recognition, spam-filters and recommendation algorithms. The respondents were then asked to state whether or not they had already heard this in the media, on social media, during lectures or from friends/family
+- In the third and fourth sections, the students were presented with various statements and asked to indicate their level of agreement on a four-point Likert scale (disagree entirely, rather disagree, rather agree, or agree entirely). While the third section aimed at specific possible applications of AI in radiology, the fourth section had a broader scope and tried to assess the students’ general fear of algorithms replacing human radiologists and other physicians.
+- The last section consisted of questions regarding respondent demographics as well as one question regarding whether the respondents considered themselves tech-savvy or not
+
+### Recruitment 
+- [@pintodossantosMedicalStudentsAttitude2019]:
+    - The questionnaire was sent out via email and advertised on social media to undergraduate medical students at three major German universities (University of Cologne, University of Bonn, University of Mainz). Participation was voluntary and had no relation to the students’ curricular activities. The students were informed that the results of the survey would be used for further statistical evaluation and scientific publication. Respondent anonymity was guaranteed by design.
+
+
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::

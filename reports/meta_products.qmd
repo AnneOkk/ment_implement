@@ -1,0 +1,190 @@
+---
+title : "Review AI - Mental Healthcare Products"
+bibliography: "../config/LMU_AI_Team.bib"
+csl: "../config/apa.csl"
+shorttitle: "Review AI Mental Health"
+author: "Anne-Kathrin Kleine"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library(googledrive)
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+```
+
+## Introduction
+
+[INSERT: Explanation AI]
+
+Mental healthcare has been slower to adopt AI technology than physical healthcare [@miller_brown18, @jiang_etal17]. Still, the number of AI-powered mental health applications has been rising over the past years [@vaidyam_etal19, @miller_polson19, @nahavandi_etal22]. Similar to physical health applications, there exists a gap between the AI algorithms and tools developed and tested in research and the available products ready to be used by patients and healthcare practitioners [see @vanleeuwen_etal21]. Specifically, despite the indications of benefits associated with integrating AI into mental healthcare to enhance diagnosis, treatment, and clinical administration quality [@shatte_etal19], most of the tools and algorithms developed and tested in research have not (yet) made it into production [@lee_etal21, @sendak_etal20, @chekroud_etal21]. In fact, "no FDA-approved or FDA-cleared AI applications currently exist in psychiatry" [@lee_etal21, p. 5]. The lack of available products mainly concerns diagnostic and recommendation tools aiming at detecting psychological disorders and suggesting clinical treatment approaches (e.g., psychopharmacotherapy versus psychotherapy) [@chekroud_etal21]. In their scoping review of machine learning in psychotherapy research, @aafjes-vandoorn_etal21 identified 51 studies that developed and tested a machine learning algorithm aiming to classify or predict treatment process or outcome data or identify clusters in the patient or treatment data. The authors conclude that current applications of machine learning in psychotherapy research provide a range of benefits for choosing appropriate treatment regimes, predicting treatment adherence, supporting therapist skill development, and predicting treatment response. @shatte_etal19 identified 190 mental health tools aiming to detect and diagnose mental health conditions, 67 focused on prognosis, treatment and support, 26 on public health applications, and 17 on research and clinical administration. These research findings do not align with the scope of marketed AI-based mental health products. While the focus of mental health AI research lies on developing tools that may detect and diagnose mental health conditions, the market is dominated by treatment, psycho-educational, and monitoring applications, such as chatbots, virtual agents, and sensor-data-based stress reduction applications [@larsen_etal19]. The main reasons for the lack of implementation into clinical practice include patient data confidentiality issues, explainability versus performance trade-offs, and the frequency of erroneous predictions (e.g., among underrepresented groups) [@roth_etal21, @chen_etal22, @sendak_etal20, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21].
+In addition, mental health interventions often rely on the relational bond formed with the patient and the direct observation of patient behaviors and emotions, thus being hesitant to rely on AI recommendations [@shatte_etal19].
+\\
+
+Despite the public attention devoted to the risks and potential benefits of AI-based mental health applications [MAYBE SOME NEWS ARTICLES], an overview of available AI-supported mental health products is currently lacking.
+In addition, we lack insight into the gap between research findings on AI-based mental health tools and marketed products in the field.
+Such an insight may provide a starting point for a systematic reduction of implementation barriers on the side of health care practitioners, application developers, and the general public, including patients suffering from mental health conditions.
+The current systematic review proceeds in two steps to answer these questions.
+First, we provide an overview of available AI-powered mental health products.
+Herein, we include products developed for the general public, patients, and mental health practitioners.
+We will search [BRIEFLY DESCRIBE SEARCH STRATEGY]... Second, we will compare the available products with the current state of AI-based research in detection and diagnosis, prognosis, treatment and support, public health applications, and clinical administration [@shatte_etal19].
+\\
+
+![AI Mental Health patents, services, and research](../figs/landscape.png)
+
+@cecula_etal21: Irrespective of the generalizability of a technique, many methods are unlikely to be implemented in health care settings simply because they are unavailable, they require too much training, or most importantly, they are not commercially viable.
+Moving forward, it is therefore important to consider the real-world practicality of translating a technique rather than the theoretical possibility that this might be possible at some (undefined) future time.
+This necessarily involves the contributions of clinicians and clinical researchers, so that the methodological advances are coupled with similarly advanced clinical reasoning to improve the efficacy of current clinical pathways.
+
+A second major barrier in the translation of machine learning methods is that the techniques are unnecessarily difficult to understand and implement for many clinicians and clinical researchers.
+This review has attempted to provide an understanding of critical techniques, and there are some excellent textbooks that can assist researchers with statistical knowledge (e.g., James et al. 2015).
+An important additional direction of research is the creation of software that does not require advanced programming skills (e.g., PRoNTO; <http://www.mlnl.cs.ucl.ac.uk/pronto/>).
+One such software package that was specifically developed to help clinical psychologists and psychiatrists answer questions introduced in this review is available from our group and is called NeuroMiner (<https://www.pronia.eu/neurominer/>).
+Using this tool, researchers can employ various CV schemes, implement preprocessing, choose a machine learning algorithm, and interpret the models with a graphical interface.
+This software has demonstrated its usefulness in a number of studies as an in-house tool (Koutsouleris et al. 2009, 2015, 2016), across a large-scale consortium-based project (PRONIA; <https://www.pronia.eu/>), and in collaborative research with other laboratories (Opel et al. 2017).
+
+## Inclusion/ exclusion criteria meta-review
+
+-   studies focused on machine learning system aimed at:
+    -   detection/ diagnosis
+    -   treatment selection
+    -   treatment
+    -   practitioner training/ care quality improvement in the mental healthcare\
+-   We defined a study to be an instance of machine learning when a non-regression statistical technique was used to develop or validate a prediction model. Therefore we excluded studies using only linear regression, logistic regression, lasso regression, ridge regression, or elastic net
+-   system to be used by mental healthcare provider (no chatbots, apps for general public)
+-   detection/ diagnosis, treatment selection, treatment focused on DSM-5 diagnosis
+-   excluding neurocognitive disorders like dementia
+-   excluding comorbid genetic disorders like Down's syndrome [e.g., @bruining_etal14]
+-   studies published in peer reviewed journals, to ensure replicability of the search procedures; We thus excluded book chapters, dissertations and other gray literature, including symposium and conference proceedings.
+-   not merely algorithm development, but tested
+-   published in English or German
+-   if multiple conditions compared for performance, average performance indicator used (e.g., @zhou_etal15 indicated performance for identification of patients vs controls based on positive, neutral, and negative mood)
+-   if goal was to differentiate individuals based on mental disease, we listed disease targeted as "multiple"
+    -   if the same dataset was used to predict multiple outcomes (e.g., to differentiate multiple diseases), we recorded information once and report average performance metrics [e.g., @tran_kavuluru17]
+-   if multiple external validation datasets were used, we collected the results from the largest validation dataset (e.g., @yahata_etal16)
+-   if different performance was achieved on different sets of predictors, we report information for predictor set with highest performance [e.g., @plitt_etal15 tested predictive power across different ROI and we report performance based on ROI with highest performance metrics]
+-   for psychotherapy studies: studies on alternative forms of therapy, such as art therapy [@kim08] or electro-compulsive therapy [@redlich_etal16], or non-therapy interactions, such as peer-to-peer support [@jaroszewski_etal19] and primary care visits [@park_etal19]
+-   no children; 14 years or older; not excluded if mean age of training dataset was \> 14 years
+    -   e.g., @plitt_etal15: Presently, it is unclear whether existing classifiers are merely detecting circuit-level consequences of living with ASD for many years. The possible age-dependence of rs-fMRI based classifiers may hinder the generalizability of a given classifier across age and underscores the need to evaluate developmental disorders in a developmental context [@dosenbach_etal10, @karmiloff-smith13]
+    -   @choi_etal18: Among the 1016,583 subjects, we included 819,951 subjects after excluding 196,632 subjects who were 14 years old or younger (prediction of 10 year suicidality)
+-   if multiple datasets was used for training the model, we report information for the combined dataset [e.g., @plitt_etal15]
+-   if different datasets were used to predict different outcomes, we recorded study information twice [e.g., @fernandes_etal18]
+-   studies published after 2015
+    -   reference for similar time frame
+
+## Inclusion/ exclusion criteria product
+
+-   "In Europe, the CE mark is a prerequisite for medical devices to be allowed on the market; therefore, CE marking of the product by April 2020 was a requirement for inclusion" [@vanleeuwen_etal21]
+    -   CE mark not relevant for mental health applications?
+    -   Alternatives?
+        -   Trusted Apps (TUV) <https://it-tuv.com/leistungen/zertifizierungen/zertifizierung-von-apps-trusted-app/#>:\~:text=Mit%20dem%20%E2%80%9ETrusted%20App%E2%80%9C%2D,sowie%20T%C3%9CV%2Deigene%20Best%20Practices.
+-   "Also, the product had to be vendor neutral and aid the radiologist in image interpretation in clinical practice."
+    -   vendor neutral?
+
+    -   
+
+        ## aid the mental health practitioner in:
+
+            a)  prognosis
+
+        -   
+
+            b)  detection/ diagnosis
+
+        -   
+
+            c)  treatment selection
+
+        -   
+
+            d)  treatment
+
+        -   
+
+            e)  predicting treatment outcome
+
+        -   
+
+            f)  skill development
+-   "To perform a balanced evaluation, we considered suite components as separate products" [@vanleeuwen_etal21]
+
+## Procedure
+
+### Collect information on AI in mental health research
+
+-   coding scheme development based on @brown_etal03
+
+### Quality assessment studies
+
+-   based on PROBAST [@navarro_etal21, @moons_etal19]
+-   We removed signalling question 4.9, "Do predictors and their assigned weights in the final model correspond to the results from the reported multivariable analysis?" because it applies to regression based studies [@navarro_etal21]
+
+### Collect information on AI Mental Health Products
+
+-   "All vendors were contacted to verify the collected information and supplement the product specifications" [@vanleeuwen_etal21]
+-   "We retrieved information about the organ-based subspeciality, modality, and main task of the product. Also, the date to market, method of deployment, and pricing model were gathered." [@vanleeuwen_etal21]
+    -   determine product main task
+    -   date to market
+    -   method of deployment
+    -   pricing model
+-   "The CE status was verified by collecting the CE certificates or Declaration of Conformity of the vendors; a public database does not exist yet (EUDAMED is planned for 2021)" [@vanleeuwen_etal21]
+    -   CE status (through EUDAMED)
+-   Also, the American FDA (Food and Drug Administration) approval status was gathered and confirmed with the public FDA database
+    -   FDA approval status
+
+### Collect information on scientific evidence for effectiveness
+
+-   "PubMed was systematically searched by vendor and product name for peer-reviewed articles published between Jan 1, 2015, and May 18, 2020"
+    -   search PubMed with relevant search term/ vendor names
+-   Secondly, a manual search was performed by inspecting the vendor's websites for listings of papers and requesting vendors to provide peer-reviewed papers. No date restriction was applied for the manual search.
+    -   search vendor websites
+-   Inclusion criteria for scientific evidence articles:
+    -   original
+    -   peer-reviewed
+    -   in English
+    -   aimed to demonstrate the efficacy of the AI software
+    -   product name (including known former names) and/or company name were mentioned
+    -   the tool was applied on in vivo human data
+    -   efficacy of the product was reported on an independent dataset (data on which the algorithm was not trained)
+    -   Letters, commentaries, reviews, study protocols, white papers, and case reports were excluded
+-   Information collected: "For each article, we reviewed the author list, funding source, and disclosures to categorize the publication as vendor independent or not. Data used in the included papers was categorized for the number of centers, countries, and acquisition machine manufacturers it originated from. We aggregated this information per product to give insights in the total number of centers, countries, and manufacturers addressed in the total evidence of that product."
+    -   authors
+    -   funding source
+    -   publication - vendor independent or not
+    -   number of centers, countries, and device manufacturers it originated from
+
+## Validation types
+
+![Validation types](../figs/valtypes.png){height="60%"}
+
+## Examples of successful implementation
+
+@cecula_etal21: For example, Chekroud et al. (2016) conducted a pattern recognition study in a sample of 1,949 individuals within a clinical trial (Star-D) (Rush et al. 2006) of citalopram.
+Using a pipeline consisting of k-fold CV with elastic net regression, they detected a parsimonious predictive pattern of 25 clinical questionnaire items from a total of 164 patient-reportable variables.
+These variables predicted clinical remission at a rate of 65%, which was more than 30% above the base rate of predicted efficacy for the drug.
+The generalizability of the models was further demonstrated by their ability to predict remission in a completely different sample, and the validity of the models was highlighted by their specificity when they did not generalize to other pharmaceutical treatments.
+Notably, the high generalizability of the predictions, together with further research (Chekroud et al. 2017), facilitated the rapid translation of the models into a web-based application designed to provide decision support to primary health care providers and clients (<https://www.springhealth.com>).
+This machine learning service is now being prospectively trialed in hospital settings, thus further highlighting the possibility of direct research translation.
+
+## Questions
+
+-   How to find products?
+    -   exhibitor lists [@vanleeuwen_etal21]
+    -   marketplace offerings [@vanleeuwen_etal21]
+    -   monitoring news sources [@vanleeuwen_etal21]
+-   Narrow down focus? - depression and anxiety? Only patients or general public?
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
