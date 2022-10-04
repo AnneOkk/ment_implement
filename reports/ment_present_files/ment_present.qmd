@@ -1,0 +1,83 @@
+---
+title : "MentAI"
+bibliography: "../config/LMU_AI_Team.bib"
+csl: "../config/apa.csl"
+shorttitle: "A review of AI-powered products in the mental healthcare sector"
+author: "Anne-Kathrin Kleine"
+format: 
+  revealjs:
+    slide-number: true
+    width: 1600
+    height: 1200
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: <https://clinaid-lab.com>
+    theme: [simple, "../config/custom.scss"]
+    scrollable: false
+    center: true
+---
+
+
+# What's the issue? {background-color="#a13c65"}
+
+## AI-powered products in the mental healthcare sector
+
+- Mental healthcare has been slower to adopt AI technology than physical healthcare [@miller_brown18, @jiang_etal17]
+
+. . .
+
+- Still, the number of AI-powered mental health applications has been rising over the past years [@vaidyam_etal19, @miller_polson19, @nahavandi_etal22]
+
+. . .
+
+- There exists a gap between the AI algorithms and tools developed and tested in research and the available products ready to be used by patients and healthcare practitioners [see @vanleeuwen_etal21]
+
+##
+
+![AI Mental Health patents, services, and research](../figs/landscape.png)
+#### Check out [AI products in radiology project](aiinradiology.org)
+
+# What is the current state of research? {background-color="#a13c65"}
+
+## Research findings
+
+- In their scoping review of machine learning in psychotherapy research, @aafjes-vandoorn_etal21 identified 51 studies that developed and tested a machine learning algorithm aiming to classify or predict treatment process or outcome data or identify clusters in the patient or treatment data
+
+- @shatte_etal19 identified 190 mental health tools aiming to detect and diagnose mental health conditions, 67 focused on prognosis, treatment and support, 26 on public health applications, and 17 on research and clinical administration
+
+. . .
+
+#### BUT: Despite the large number of research findings, "no FDA-approved or FDA-cleared AI applications currently exist in psychiatry" [@lee_etal21, p. 5]
+
+# Why are there (almost) no products available to clinicians in the mental healthcare sector? {background-color="#a13c65"}
+
+## Some reasons for a lack of available products:
+
+- patient data confidentiality issues, 
+- explainability versus performance trade-offs, 
+- frequency of erroneous predictions (e.g., among underrepresented groups) [@roth_etal21, @chen_etal22, @sendak_etal20, @kelly_etal19, @chekroud_etal21, @aafjes-vandoorn_etal21]
+
+. . . 
+
+- In addition, mental health interventions often rely on the relational bond formed with the patient and the direct observation of patient behaviors and emotions, thus being hesitant to rely on AI recommendations [@shatte_etal19].
+
+# What do we want to accomplish with the review? {background-color="#a13c65"}
+
+## Benefits of the review
+
+- Despite the public attention devoted to the risks and potential benefits of AI-based mental health applications, an overview of available AI-supported mental health products is currently lacking
+
+. . .
+
+- Such an insight may be a **reality check**: There's a huge hype around AI products (especially in the healthcare domain), but it is currently unknown which products are currently available and whether they reflect the state of research in the domain 
+
+. . .
+
+
+- the review also seeks to **identify implementation barriers** on the side of health care practitioners, application developers, and the general public, thus providing useful hints for future product development and recommendations how to overcome the research-practice gap
+
+
+## Current review approach {background-color="#a13c65"}
+
+#### See [this excel sheet]()

@@ -1,0 +1,77 @@
+---
+title: "Precision Psychiatry: Patents and Products"
+author: "Anne"
+format: html
+editor: visual
+bibliography: "config/refs.bib"
+---
+
+# Introduction 
+
+## Precision Psychiatry 
+
+The treatment of mental health illnesses often involves multiple medication and treatment changes.
+Changes of medication and psychotherapeutic approaches may not only impact patients' quality of life but also lead to high costs to to ineffective and therefore often prolonged treatments [@zanardi_etal21].
+For example, only about one third of major depressive disorder patients experience a remission of symptoms after the first treatment with antidepressants. One third needs an increased dosage or a supplemented therapy with another antidepressant and one third does not respond at all [@zanardi_etal21, @trivedi_etal06, @souery_etal11]. 
+The established practice of finding an appropriate treatment is characterized by a trial-and-error approach [@zanardi_etal21].
+Clinical diagnoses alone are often not sufficient for determining optimal treatment approaches.
+The definition of mental health conditions relies on psychiatric nosology, traditionally represented by the ICD and DSM criteria [@fusar-poli_etal19]. 
+The usefulness of conventional clinical diagnostics has been questioned [@first_etal18]. 
+A useful approach towards effective personalized treatment approaches is put forward by the so-called transdiagnostic approach. 
+A transdiagnostic approach in psychiatry cuts across existing diagnostic categories by producing novel classifications based on a multitude of data inputs [@fusar-poli_etal19]. 
+Over the past decades, efforts have been undertaken to develop personalized treatment approaches by integrating information obtained from biomarker, behavioral and demographic, and questionnaire data.
+
+
+# Materials and Methods
+
+## Planning
+
+We chose Google Patents as a freely available global patent database that involves patents from the United States Patent and Trademark Office, European Patent Office, and World Intellectual Property Organization. 
+
+For every granted patent identified, we search for associated available products and information about clinical goals, data input and output, integration, deployment, certification (FDA, CE), and pricing model. 
+
+
+## Defining the Scope
+
+The following Research Questions guided the current investigation:
+
+Q1: What are the key features of applied/ granted transdiagnostic patents in terms of disorder syndromes targeted, clinical goals, transdiagnostic domains, transdiagnostic types, and transdiagnostic constructs? 
+
+Q2: Who are the main players in terms of assignees and inventors with the largest number of applied/ granted patents?
+
+Q3: Is there a trend regarding the number of and the clinical goals of applied/ granted patents since 2015?
+
+Q4: How many and which granted patents may be associated with currently available products? 
+
+Q5: What are the key features of available products associated with granted patents in terms of disorder (syndromes) targeted, clinical goals, data input and output, integration, deployment, certification (FDA, CE), and pricing model?
+
+## Searching the Literature
+
+We searched Google Patents using the following search term:
+
+("mental health" OR "mental illness" OR "psychiatric" OR "psychological") AND ( "precision psychiatry" OR transdiagnostic OR "psychiatric syndrome" OR "mental syndrome" OR "behavioral syndrome" OR  "disorder factors" OR "spectrum disorder" OR "diagnostic spectrum" OR "diagnostic spectra" OR "beyond-diagnoses" OR "across-diagnoses" OR "beyond diagnoses" OR "across diagnoses" OR "beyond-spectra" OR "across-spectra" OR "beyond spectra" OR "across spectra" OR "a-diagnostic"  OR "symptoms network" OR "personalized" ) AND ("machine learning" OR "artificial intelligence")
+
+We limited the amount of records returned by applying the following exclusion criteria:
+
+E1: Exclude patents filed or articles published before 2015;
+
+E2: Exclude items that are not written in English;
+
+E3: Exclude abandoned patent applications.
+
+## Synthesizing and Analyzing
+
+# Results and Discussion 
+
+
+
+
+
+## The weirdest patent outtakes
+
+> For example, the measurements can be taken over a period that could be seconds, hours, or days. For example, a subject can be monitored for days at a time (e.g., by placing cameras and microphone recorders in his house and monitoring him during his free and private time at his home in addition to his time in the workplace).
+
+
+> A mammalian subject
+
+> The system is designed, inter alia, for users (subjects), mammals, animals, children or adults, who are overweight
