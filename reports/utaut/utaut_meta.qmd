@@ -1,0 +1,78 @@
+---
+title: "The Implementation of AI-Enabled Medical Support Systems: A Systematic Review and Meta-Analysis Based on the Universal Theory of Acceptance and Use of Technology"
+bibliography: "../../config/LMU_AI-Team.bib"
+csl: "../../config/apa.csl"
+shorttitle: "Medical Support Systems in Medicine"
+author: 
+  - name: "Anne-Kathrin Kleine"
+    email: "anne-kathrin.kleine@psy.lmu.de"
+    affiliations:
+      - name: "University of Munich"
+        city: "Munich"
+keywords: "utaut, clinical decision support system, meta-analysis"
+format: 
+  docx:
+    reference-doc: "../../config/template_word.docx"
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+
+```{r analysis-preferences}
+#| include: false
+# Seed for random number generation
+set.seed(42)
+```
+
+# Abstract
+
+## Research goals and why the work was worth doing
+
+Artificial intelligence (AI) enabled clinical decision support systems (CDSS) may help clinicians diagnose diseases and forecast disease courses, select appropriate treatment regimens, and predict treatment outcomes [e.g., @davenport_kalakota19].
+The use of AI tools has become widespread in some healthcare areas. 
+For example, radiologists use AI recommendations to detect cancerous lumps [@vanleeuwen_etal21]. 
+At the same time, healthcare practitioners often do not adopt available tools [e.g., @sendak_etal20]. Reasons for their skepticism include a general reluctance to base decisions on algorithms, data privacy concerns, or the belief that these tools do not offer any benefits for their care [e.g., @shaw_etal19].
+
+AI-enabled CDSS may not only enhance efficiency and effectiveness in healthcare but has the potential to reconfigure the way care is delivered [@shaw_etal19].
+Based on the unified theory of acceptance and use of technology [UTAUT; @venkatesh_etal03; @venkatesh_etal16], the current meta-analysis examines the predictors and boundary conditions of the intention to use AI-enabled CDSS. 
+Over the past years, the UTAUT has been applied extensively to study the acceptance and intention to use AI-enabled tools in healthcare [e.g., @fan_etal20; @tamori_etal22]. Despite the accumulation of research, we still lack a comprehensive overview and empirical integration of research findings on the antecedents of the intention to use AI-enabled CDSS among clinicians. 
+
+## Theoretical background
+
+The UTAUT provides a theoretical framework that explains the relationship between technology, environment, and user characteristics with the behavioral intention to use an AI-enabled tool. It includes four main predictors of the intention to use a tool: a) performance expectancy, as the degree to which an individual believes that using a system will enhance their performance, b) effort expectancy, as the degree of ease associated with using the technology, c) social influence, as the perception that important others believe that the system should be used, and d) facilitating conditions, as the belief that the infrastructure exists to support the use of the system. 
+Because of the high-stakes decision-making process and the sensitive nature of the data used for AI-enabled recommendation systems in healthcare, we include trust as a relevant additional predictor of the behavioral intention to use AI-enabled CDSS [@arfi_etal21]. 
+The UTAUT has been criticized for ignoring influencing factors on the organizational and broader societal level [e.g., @shachak_etal19]. To counter this criticism, we conduct sub-group and moderation analyses that account for specific contextual (e.g., organization type, healthcare area) and individual (e.g., age, gender) boundary conditions of the relationship between UTAUT predictors and the intention to use AI-enabled CDSS. 
+
+## Design and methodology 
+
+We follow the PRISMA guidelines for systematic reviews and meta-analyses [@page_etal21]. First, we search electronic databases (e.g., Web of Science, ERIC, PsycInfo, Academic Search Premier, and ProQuest) using the keywords "medicine", "utaut", and related terms. Second, we conduct forward searches in Google Scholar of studies citing @venkatesh_etal03. Third, we search abstracts of relevant conference proceedings. We exclude articles if they are not published in English, focus on tools that do not fall within the definition of AI-enabled CDSS, do not measure the intention to use or the actual use of AI-enable CDSS, or do not include predictor variables included in the UTAUT research model.
+We meta-analytically assess the bivariate relationship between UTAUT predictors and outcomes. In addition, we conduct moderation analyses to evaluate the influencing effect of contextual (e.g., clinical context, healthcare domain) and individual (e.g., age, location) variables. 
+
+## Expected results 
+
+We expect the results to be available by mid-December 2022. 
+
+## Limitations
+
+The current meta-analysis focuses on the individual attitude towards AI-enabled CDSS. Other theoretical frameworks, such as the framework of Nonadoption, Abandonment, and Challenges to the Scale-Up, Spread, and Sustainability (NASSS) of health and care technologies [@greenhalgh_etal17] may be helpful in understanding influencing factors embedded in the broader political, regulatory, and sociocultural system [@shaw_etal19]. 
+In addition, we expect most of the studies included in the meta-analysis to use self-report measurements, possibly increasing the risk of common method bias [@podsakoff_etal03]. 
+
+## Conclusions
+
+By applying the UTAUT to the context of AI-enabled CDSS and considering individual and contextual boundary conditions, we counter some of the criticism regarding the overly simplistic approach of UTAUT research. A meta-analytic approach allows us to rigorously examine the value of applying the UTAUT to the context of AI-enabled CDSS and suggesting empirically-based modifications and extensions to the existing framework. The insight may be used in educational programs that aim at easing the adoption of AI tools, thus potentially increasing healthcare practitioner effectiveness and efficiency.
+
+## Relevance to the congress theme
+
+The future is now. The current meta-analysis contributes to acquiring urgently needed competencies among healthcare practitioners. 
+
+
+
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
